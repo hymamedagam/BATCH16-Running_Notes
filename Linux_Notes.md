@@ -1,7 +1,9 @@
 12-06-2025
 ============
 AWS ACCOUNT 
+
 EC2 INSTANCE /SERVER /VM - AMAZON LINUX OS --- CREATED 
+
 GIT BASH 
 
 ==========
@@ -10,9 +12,13 @@ whoami
 sudo su - 
 
 hostname
+
 hostnamectl set-hostname <server.name>
+
 sudo su - 
+
 hostname -I 
+
 uname 
 uname -a
 date 
@@ -49,7 +55,7 @@ yum install <git >
 apt install <java>
 
 ==============
-
+```
 [root@linuxserver ~]# history
 
     1  hostname
@@ -101,3 +107,4 @@ apt install <java>
    47  yum install git
    48  git --version
    49  history
+```
