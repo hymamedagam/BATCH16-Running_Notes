@@ -1,3 +1,4 @@
+12-06-2025
 ============
 AWS ACCOUNT 
 EC2 INSTANCE /SERVER /VM - AMAZON LINUX OS --- CREATED 
@@ -16,6 +17,7 @@ uname
 uname -a
 date 
 uptime 
+
 ====================
 touch file1 file2 file3 
 
@@ -38,15 +40,18 @@ cd ..
 
 
 cat fname 
+
 ======================
+
 yum install <java>
 yum install <git >
 
 apt install <java>
 
-==================
+==============
 
 [root@linuxserver ~]# history
+
     1  hostname
     2  hostname -I
     3  uname
@@ -92,9 +97,7 @@ apt install <java>
    43  git
    44  java
    45  yum install java
-   46* java --versio
+   46  java --version
    47  yum install git
    48  git --version
    49  history
-=============
-ALL RUNNING CLASS COMMANDS FOR YOUR QUICK REF 👆👆👆
