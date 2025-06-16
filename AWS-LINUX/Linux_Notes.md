@@ -181,6 +181,7 @@ mv <src.path> <dest>
 =========================
 
 useradd madhu 
+ 
 passwd <uname> 
 
 su - uname
@@ -188,9 +189,11 @@ su - uname
 sudo su - uname 
 
 cat etc/passwd
+
 userstanga
 
 usermod -c "DevOpsUser" madhu
+
 userdel -r uname 
 
 ===================================
@@ -198,14 +201,18 @@ userdel -r uname
 cat /etc/passwd
 
 tail -n /etc/passwd
+
 head -n <fname 
+
 more fname
 
 ==================
 wc  /etc/passwd
 
 wc -l /etc/passwd
+
 wc  -w /etc/passwd
+
 wc  -c /etc/passwd
 =================================
 
