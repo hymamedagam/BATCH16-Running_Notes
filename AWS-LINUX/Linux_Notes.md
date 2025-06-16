@@ -207,6 +207,7 @@ head -n <fname
 more fname
 
 ==================
+
 wc  /etc/passwd
 
 wc -l /etc/passwd
@@ -214,6 +215,7 @@ wc -l /etc/passwd
 wc  -w /etc/passwd
 
 wc  -c /etc/passwd
+
 =================================
 
 yum install java 
