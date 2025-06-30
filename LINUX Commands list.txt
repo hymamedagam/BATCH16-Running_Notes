@@ -1,0 +1,53 @@
+Basic Commands
+Command	Purpose						Example
+ls	List files and directories			ls -l (long listing)
+cd	Change directory				cd /home/user
+pwd	Print current directory				pwd
+mkdir	Create directory				mkdir new_folder
+rmdir	Remove empty directory				rmdir old_folder
+touch	Create empty file or update timestamp		touch file.txt
+cp	Copy files or directories			cp file1.txt file2.txt
+mv	Move or rename files				mv old.txt new.txt
+rm	Remove files					rm file.txt
+cat	Display file content				cat file.txt
+head	Show first 10 lines of a file			head file.txt
+tail	Show last 10 lines of a file			tail -f /var/log/syslog
+echo	Print text to terminal				echo "Hello World"
+man	Show manual pages				man ls
+chmod	Change file permissions				chmod 755 script.sh
+chown	Change file owner and group			chown user:group file.txt
+
+Intermediate Commands
+Command		Purpose						Example
+ps		List running processes				ps aux
+top		Interactive process monitor			top
+htop		Enhanced process monitor (needs install)	htop
+kill		Send signals to processes			kill 1234
+grep		Search text in files				grep "error" logfile.log
+find		Find files and directories			find /home -name "*.txt"
+df		Disk space usage				df -h
+du		Directory/file space usage			du -sh /var/log
+tar		Archive files					tar -cvf archive.tar file1 file2
+zip/unzip	Compress/uncompress files			zip archive.zip file.txt
+scp		Secure copy over SSH				scp file.txt user@host:/path
+ssh		Remote login					ssh user@host
+wget		Download files from the web			wget http://example.com/file
+curl		Transfer data from or to a server		curl -O http://example.com/file
+awk		Text processing and pattern matching		awk '{print $1}' file.txt
+sed		Stream editor for filtering/transform		sed 's/old/new/g' file.txt
+
+Advanced Commands
+Command		Purpose						Example
+vmstat		System performance monitoring			vmstat 2
+iostat		Disk I/O statistics				iostat 2
+netstat		Network statistics				netstat -tuln
+tcpdump		Network packet analyzer				tcpdump -i eth0
+strace		Trace system calls				strace ls
+lsof		List open files					lsof -i :80
+iptables	Firewall configuration				sudo iptables -L
+crontab		Schedule tasks					crontab -e
+rsync		Sync files and directories			rsync -avz /src /dest
+dd		Low-level copying and conversion		dd if=/dev/sda of=/backup.img bs=4M
+journalctl	View systemd logs				journalctl -xe
+systemctl	Control systemd services			systemctl restart apache2
+chmod		Change permissions (with numeric mode)		chmod 755 script.sh
