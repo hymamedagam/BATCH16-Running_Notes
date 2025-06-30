@@ -1,0 +1,210 @@
+SDLC: Software Development Life cycle
+--> It is a structured process for developing software applications, ensuring high quality and efficiency.
+It consists of several phases:
+planning: defines project scope, feasibility, and system resources
+Requirements analysis: Gather and document user and system requirements
+Design: create system architecture, UI UX design, and database models
+Implementation(coding): Developers write and test the actual code
+Testing: Perform unit, integration, system and user acceptance testing
+Deployment: Release software to production
+Maintenance: Fix bugs, provide updates, enhance features
+
+Common SDLC models are: waterfall, agile, v-model, spiral, and DevOps
+
+DevOps: DevOps is a combination of Development and operation team activities.
+It is a methodology, culture, a strategy.
+It automates the process of SDLC.
+
+Waterfall approach: Waterfall model is a process where the development of new phase begins only after the completion of previous phase.
+Difficulty in this approach:
+1)here development work takes longer duration of time
+2) By the time of product is released to the market, customer requirements is changed.
+3) As a result, customer might lose interest in the product due to it's extended development, or change in his requirement.
+
+Agile Approach: Agile model breaks down the product development work into smaller iterations to minimize the upfront required for planning and design.
+
+Agile solves the drawbacks of waterfall model by:
+1) Releasing a product in iterations not at one go
+2) Accepting changes in requirements at different iterations
+
+Difficulty in Agile approach:
+1) lack of collaboration between developer and operation teams, slowed down the development process and product release
+2) It does not automate the steps followed at different iterations.
+
+Note: Code worked in Development side, but it is not worked in operations side due to dependency issues, slowed down the product release.
+
+DevOps: It is a strategy which bridges the gap between developer and operation teams, helps to deliver software on time.
+--> It quickly, easily, repeatedly, and safely moves the software from development infrastructure to production infrastructure.
+--> DevOps solves the drawbacks of both waterfall and agile models.
+--> It improves the collaboration and productivity by :
+automating infrastructure
+automating workflows
+continuously monitoring application performance
+
+==> DevOps -> Patric Debois with his team (2009)
+
+Benefits of DevOps:
+
+1) Faster development and deployment: Speeds up the release of new features and fixes.
+2) Better collaboration: Promotes teamwork and breaks down barriers.
+3) Higher Product quality and customer satisfaction: Continuous testing and monitoring lead to better software.
+4) Reduce Time to market: Automation and streamlined processes shorten delivery times.
+5) Scalability and Flexibility: Easily scale applications and infrastructure as needed.
+
+DevOps has 200+ tools.
+
+1) Source Code Management Tools:
+--> Source code management tools are served to store the code with various versions
+--> Here we will get to know all the minor & major changes with date & time
+
+Purpose: Track and manage code changes.
+
+SCM Tools:
+GIT
+SVN
+GitLab
+BitBucket etc.,
+
+2) Build Tools: Build tools are used to build the code and it generates an executable file.
+Here we will get executable files in various formats like .Jar, .War, .Ear etc.,
+
+Purpose: Automate compiling code, running tests, and packaging applications
+
+Build Tools:
+Maven
+ANT
+Gradle
+
+3) Application servers: All the executable files are deployed in application servers to access the application.
+--> Here all the code changes from SCM tools will keep continuously build using build tools and deploy the code to application servers so that
+we can access all the minor and major requirements.
+
+Purpose: Host and manage web applications.
+
+Tomcat
+Web Logic
+JBoss
+Web Sphere
+
+4) CI & CD: Here all the process is configured using ci & cd tools.
+--> Like we need configure SCM, build, and application servers.
+--> It is a automated process where we can pre-defined when to pull the code from SCM, and when to build using build tools, and where to deploy executable files.
+--> Jenkins is an open-source automation server that enables continuous integration and continuous delivery.
+--> It automates the building, testing, and deploying software, making it easier for developers to integrate changes and for teams to deliver
+updates quickly and efficiently.
+
+Purpose: Automate the process of integrating and delivering code.
+
+Jenkins (CI & CD)
+AWS codepipeline
+GitHub actions
+GitLab CI/CD
+
+
+5)Cloud computing: It is a internet based computing that provides shared computer process resources on rental basis.
+based on usage, we can enhance or reduce the capacity.
+
+Purpose: Provide on-demand, scalable computing resources.
+AWS
+AZURE
+GCP
+
+
+Kubernetes: Kubernetes is an open-source container orchestration platform for automating application deployment,
+scaling, and management.
+--> It groups containers into logical units for easy management and discovery, helping to ensure high availability and
+scalability of applications.
+--> Kubernetes maintains application availability through self-healing mechanisms.
+--> Kubernetes allows applications to run consistently across different environments.
+
+Docker: Docker is a platform that allows developers to automate the deployment of applications inside lightweight, portable containers.
+--> Containers package an application and its dependencies, ensuring consistent operation across different environments and simplifying deployment and scaling.
+--> Docker optimizes resource utilization and speeds up deployment
+--> Docker containers provide process isolation for increased security.
+
+Ansible: Ansible is an open source automation tool for configuration management, application deployment, and task management.
+--> Ansible uses a straightforward, YAML, making it easy to learn and use.
+
+--> Ansible operates without the need for installing agents on managed systems, simplifying setup and maintenance.
+--> Idempotent, Scalability
+========================
+
+AWS+DevOps
+
+OS - LINUX (RHEL), WINDOWS
+SCM - GIT, GITHUB
+BUILD - MVN
+CI CD - JENKINS
+CONFIGURATION MANAGEMENT - ANSIBLE
+CONTAINER - DOCKER
+CONTAINER ORCHESTRATION - KUBERNETES
+IAC - TERRAFORM
+APPLICATION SERVER - TOMCAT
+CLOUD - AWS
+CODE QUALITY - SONARQUBE
+ARTIFACTORY - NEXUS/JFROG
+SCRIPTING- PYTHON SCRIPTING, SHELL/BASH
+CONTINUOUS DELIVERY - Argo CD
+MONITORING - PROMETHEUS, GRAFANA, NAGIOS
+
+
+
+1Q. What are your day-to-day activities as a DevOps/Kubernetes engineer?
+Answer:
+
+In my day to day activities , I will handle multiple tasks: My day starts with a team meeting called a "scrum call." In this meeting, we discuss our progress, and the team assigns tasks for the day. After the meeting, I check Jenkins, a tool we use for automation. I look for any new builds or updates. If there are errors in the builds, I work on fixing them. Kubernetes Monitoring: If Jenkins is running smoothly, I move on to checking our Kubernetes (K8s) clusters and pods. These are parts of our system where applications run. If any pod has issues or isn’t working correctly, I troubleshoot the problem, fix it, and inform my team about the updates. Sometimes, I create Kubernetes configuration files called manifest files. These define how our applications and services should run in the Kubernetes environment. We have distributed team,where cloud team will ping me,for some cloud tasks like creating ebs,s3,iam roles and vpc related issues.
+
+
+Self-Introduction :
+
+Good morning, my name is Medagam. Hymavathi, and I am a DevOps Engineer with 3 years of experience at Infosys.
+I specialize in implementing and managing CI/CD pipelines using Jenkins, Git, GitHub, and Ansible.
+I've worked extensively on AWS cloud services for deployment and infrastructure automation.
+My experience includes containerization using docker and orchestration with Kubernetes
+I've used Python scripting for automating routine DevOps tasks.
+I'm familiar with both Linux and windows environments
+I've integrated tools like SonarQube, Trivy for code and image scanning, and Nexus for artifact management.
+Also, worked with Tomcat servers and monitoring tools like Prometheus and Grafana
+I,m currently looking for new opportunities where I can contribute and grow as a DevOps professional.
+
+Thank you for this opportunity. I,m eager to take the next step in my DevOps career.
+
+
+Day-to-Day activities of DevOps Engineer:
+==================================
+
+As a DevOps Engineer, my day starts with checking if all systems and services are running smoothly.
+I work on automating software builds, deployments, and infrastructure setups.
+I often write or update scripts to save time and reduce manual work
+I use tools like Jenkins, Ansible, and docker to manage workflows and environments.
+Monitoring tools help me track system performance and fix issues quickly.
+I also coordinate with developers to ensure new changes go live smoothly and without errors.
+
+I regularly collaborate with developers and QA teams to troubleshoot issues and streamline deployments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
