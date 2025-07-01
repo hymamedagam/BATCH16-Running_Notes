@@ -1,0 +1,1826 @@
+11-June-2025: LINUX
+===========
+Class-1
+---------
+Cloud: Cloud computing refers to the delivery of computing services-including servers, storage, databases, networking, software,
+and analytics over the internet("the cloud") rather than through local servers or physical devices.
+--> These services are provided by cloud providers like AWS, Azure, GCP
+
+1) cloud provide services. 
+2) Cloud computing is the delivery of on-demand computing resources such as hardware, storage, databases, networking,
+and software to businesses and individuals via internet.
+3) If companies want to deploy any IT product or an application, networking, storage, servers, virtualization,
+os, middleware, runtime, data, applications are mandatory.
+Some companies are not afford to buy these things. so they prefer cloud services.
+
+4) High availability in the cloud is a computing infrastructure that allows a system to continue functioning 
+even when certain components fail.
+
+
+why cloud computing:
+-------------------
+1) Cost efficiency: You only pay for what you use
+2) Scalability: Easily scale up or down services based on the demand.
+3) Flexibility: Access from anywhere with an internet connection.
+4) Performance: Cloud providers offer high performance infrastructure with global data centers, ensuring low latency and high availability
+5) Security: Cloud Providers invest heavily in security measures, offering data encryption, compliance standards,
+and more robust protection than organizations can afford on their own.
+6) Disaster Recovery: The cloud offers built-in disaster recovery solutions to ensure that your data is backed up
+and recoverable in case of a system failure.
+7) Fault-tolerance: Fault tolerance is the ability to remain up and running during component and service failures.
+
+
+Before cloud:
+-----------
+Ex-1) Online shopping
+challenges: 1) Peak load during holidays and weekends
+	    2) less load during rest of time
+Solution(before cloud): Peak load provisioning --> procure(buy) infrastructure for peak load.
+
+Ex-2) Start Up
+Challenges: 1) Startup suddenly becomes popular
+	    2) How to handle sudden increase in load?
+
+Solution(before cloud): 1) procure(buy) infrastructure assuming they would successful
+			2) what If they are not successful
+
+Before cloud-challenges:
+====================
+1)High cost of procuring infrastructure
+2)Needs ahead of time planning(can u guess the future?)
+3)Low infrastructure utilization(peak load provisioning)
+4) Dedicated infrastructure maintenance team(can a startup afford it?)
+
+CapEx vs OpEx:
+=============
+
+CapEx: On-premise
+1) own infrastructure
+2) lots of maintenance
+  - support & staff
+  - power & networking
+  - hardware failures
+  -others
+3) upfront cost
+
+OpEx: Cloud
+1) Rent infrastructure
+2) No initial investments, pay for what you use
+3) minimal maintenance. eg: Operations team
+
+
+Disadvantages:
+=================
+1) Downtime risks:
+--> Dependency on internet connectivity: Cloud services requires a stable and fast internet connection.
+Any downtime in internet service could disrupt access to applications and data.
+
+--> Outages from cloud providers: Cloud providers can experience outages, which can impact the availability of services for users.
+
+2) Security and privacy concerns:
+--> Data breaches: Although cloud providers offer security, storing sensitive data in the cloud can introduce risks, such as data breaches.
+--> Compliance: Some industries like, healthcare or finance, have strict data compliance regulations that might be more complex
+to manage in cloud environment.
+
+3) Limited control:
+--> Vendor lock-in: Once you have built a system on a specific cloud platform, it can be difficult and costly to move to 
+another cloud provider due to differences in technologies and pricing models.
+--> Less direct control: Using cloud-infrastructure means giving up some control over hardware and software management,
+as provider handles maintenance and updates.
+
+4) Costs: Although cloud services are generally cost-effective, they can become expensive if not managed properly,
+especially with pay-as-you-go model for data storage, processing power, or network bandwidth.
+
+Additional costs for data transfer, backup, or certain features can add up unexpectedly
+
+5)Latency issues: 
+Geographical limitations: If the cloud providers' data center is far from the user's location,
+latency might be an issue, impacting application performance.
+
+6) Migration challenges:
+Data Migration: Moving  large amounts of data to the cloud or switching between cloud providers can be complex and time-consuming,
+particularly for enterprises with sensitive-data.
+
+Differences between on-premise and cloud:
+=======================================
+1) On-premises:
+--> The company owns and manages its own servers, storage, networking equipment.
+--> Hosted within the company's datacenter
+--> High upfront costs for hardware, maintenance, and power consumption
+--> Full control over security, but requires in-house expertise to manage.
+--> IT team is responsible for updates, patches, and disaster recovery
+--> Limited by physical resources, scaling requires purchasing new hardware.
+
+2) Cloud:
+--> Infrastructure managed by cloud providers
+--> Hosted in remote data centers and accessed via internet
+--> Pay-as-you-go model with lower upfront costs.
+
+ Disadvantages of on-premise:
+--> High initial costs
+--> Ongoing maintenance costs
+--> Limited scalability
+--> Complex disaster recovery
+--> Security challenges
+--> Longer deployment time
+--> Lack of flexibility
+--> High risk of downtime
+
+*************************************************************************************************
+
+Class-1: LINUX (11-jun-2025)
+********************************
+Linux was created by Linus Torvalds- In 1991
+
+Linux: operating system
+1) An operating system (OS) is system software that acts as an intermediary between computer hardware and the user. 
+It manages hardware resources and provides essential services that allow users and programs to interact with the computer effectively.
+2) It is the main software that runs on computer or phone.
+
+Examples of most popular systems:
+Windows – Used on most PCs and laptops.
+macOS – Used on Apple computers.
+Linux – Free and open-source OS for computers.
+Android – Used on most smartphones.
+iOS – Used on iPhones and iPads.
+
+3) ✨ Main Features of Linux (Simple Terms)
+Feature			What It Means
+Open Source		Anyone can view or change the code
+Free			No cost to download or use
+Secure			Very few viruses and strong protection
+Stable			Rarely crashes or freezes
+Multitasking		Can run many programs at once
+Multiuser		Many users can use the same system safely
+Portable		Can run on different types of devices
+Community Support	Big community ready to help for free
+
+4) 🖥️ Linux vs Windows vs macOS – Simple Comparison
+Feature			Linux 🐧					Windows 🪟				macOS 🍎
+Cost			Free						Paid (comes with most PCs)		Paid (comes with Apple devices)
+Speed			Fast, works well on old PCs			Slows down over time			Fast and smooth on Apple hardware
+Security		Very secure, few viruses			Needs antivirus				Quite secure
+Customization		Fully customizable				Limited customization			Very limited customization
+Apps/Games		Fewer, but growing				most apps and games available		Good, but fewer games than Windows
+User Interface		Many options (can change easily)		Easy to use				Very polished and user-friendly
+Software Updates	You control updates				Forced updates sometimes		Automatic, but smooth
+Open Source?		Yes (can see/edit the code)				No					No
+Best For		Developers, tech users, servers			General users, gamers, offices		Creative users (design, video, etc.)
+Privacy			No tracking					Some tracking					Some tracking
+Hardware Support	May need extra setup				Works with most hardware		Only works on Apple hardware
+
+🏁 Summary (Very Simple):
+Linux: Great if you want freedom, speed, security, and don’t mind learning a bit.
+
+Windows: Best if you want lots of apps/games and easy use.
+
+macOS: Best if you like Apple products, clean design, and creative tools.
+
+
+Linux is now used in:
+=====================
+Servers and websites
+Android phones
+Smart TVs and cars
+Supercomputers
+Even space missions (like NASA and SpaceX)
+
+Note: customizable: You can change how it looks and works to fit your style.
+
+
+UNIX: Older operating system- In 1970's - AT&T’s Bell Labs.
+UNIX was initially developed by Ken Thompson and Dennis Ritchie at AT&T Bell Labs. 
+
+Linux Distro	
+Ubuntu	
+Debian	
+Fedora
+Ama	
+Arch Linux	
+Linux Mint	
+Kali Linux	
+CentOS / AlmaLinux / Rocky Linux	
+Zorin OS	
+Amazonlinux
+
+🧾 Examples of UNIX Operating Systems:
+Most UNIX systems are used in businesses or servers, not home use.
+
+UNIX System
+AIX	--> IBM provides license
+HP-UX	--> HP
+Solaris	--> Sun microsystems
+IRIX	
+BSD Family:	
+— FreeBSD	
+— NetBSD	
+— OpenBSD	
+
+===============
+Here are 5 simple differences between Linux and UNIX:
+===============
+
+Origin
+
+UNIX: Developed in the 1970s at AT&T’s Bell Labs.
+Linux: Created by Linus Torvalds in 1991 as a free alternative to UNIX.
+
+Cost and License
+
+UNIX: Mostly commercial and paid software.
+Linux: Free and open-source.
+
+Source Code
+
+UNIX: Closed source (not freely available).
+Linux: Open source (anyone can view and modify).
+
+Hardware Support
+
+UNIX: Runs on specific, often expensive hardware.
+Linux: Runs on a wide variety of hardware, from old PCs to smartphones.
+
+Usage
+
+UNIX: Mainly used in big companies, servers, and workstations.
+Linux: Used everywhere — servers, desktops, smartphones, embedded devices.
+
+======================
+What is the Kernel in Linux?
+===================
+The kernel is the core part of the Linux operating system.
+It’s like the brain or middleman that connects the computer’s hardware (like CPU, memory, and devices) with the software (programs and apps) you use.
+
+What the Kernel Does:
+Controls hardware — like your keyboard, mouse, and hard drive.
+Manages memory — decides which program uses how much RAM.
+Handles processes — runs programs and makes sure they don’t interfere with each other.
+Manages files and devices — helps read/write files and talk to printers, USB devices, etc.
+
+In short:
+Without the kernel, your computer wouldn’t know how to use its hardware or run any programs.
+
+===================
+What is a Shell in Linux?
+====================
+A shell is a program that lets you talk to the Linux operating system by typing commands.
+Think of it like a translator between you and the computer — you type instructions, and the shell tells the system what to do.
+
+What the Shell Does:
+Runs commands you type (like opening files, running programs).
+Lets you write scripts (a list of commands) to automate tasks.
+Shows output from commands you run.
+Helps manage files and processes.
+
+🐚 Types of Shells in Linux
+Bash (Bourne Again Shell)
+
+The most popular and default shell on many Linux systems.
+Easy to use and powerful for scripting.
+
+Sh (Bourne Shell)
+
+One of the oldest shells.
+Simple and used in many scripts for compatibility.
+
+Csh (C Shell)
+
+Syntax looks like the C programming language.
+Good for users familiar with C.
+
+Tcsh
+
+An improved version of Csh with extra features like command completion.
+
+Ksh (Korn Shell)
+
+Combines features of Sh and Csh.
+Popular for scripting and interactive use.
+
+Zsh (Z Shell)
+
+Highly customizable and user-friendly.
+Has powerful features like better auto-completion and themes.
+======================
+
+Linux architecture:
+====================
+ "Lovable Intellect Not Using XP" --> Linux
+The full form of UNIX is UNiplexed Information Computing System.
+
+Kernel uses " C language"
+
+Architecture components:
+
+Applications: Programs you use daily (like web browsers, games, editors).
+They run on top of the system, using libraries and the kernel.
+Shell: An interface that allows users to interact with the kernel. It interprets commands and translates them into actions that the kernel executes. 
+Common shells include Bash, Zsh, and others. 
+Kernel: The core of the Linux operating system, responsible for managing hardware resources, memory, and processes. 
+It directly interacts with the hardware. 
+Hardware: The physical components of a computer, such as the CPU, memory, storage devices, and peripherals, form the base layer. 
+
+
+🧱 Main Parts of Linux Architecture:
+🧠 Kernel (The Core Brain)
+The heart of Linux.
+
+Talks to the hardware (CPU, memory, disk, etc.).
+
+Manages processes, files, and devices.
+
+📚 System Libraries
+Help software talk to the kernel.
+
+Contain ready-made functions that programs can use (like saving a file or printing text).
+
+🛠️ System Utilities
+Tools that help you control and manage the system.
+
+Examples: ls (list files), cp (copy files), top (view running programs).
+
+💬 Shell
+A command-line interface where you type commands.
+
+It takes your commands and asks the system to do them.
+
+🧑‍💻 User Applications
+Software you use every day like browsers, text editors, games, etc.
+
+These run on top of Linux and use everything below.
+
+📊 Simple Diagram:
+
+[ User Applications ]     ← Programs like browsers, editors
+[      Shell        ]     ← Where you type commands
+[  System Utilities ]     ← Helpful tools and commands
+[ System Libraries  ]     ← Connects programs to kernel
+[      Kernel       ]     ← Controls hardware and system
+[     Hardware      ]     ← CPU, RAM, disk, keyboard, etc.
+✅ In Simple Words:
+Linux architecture is a well-organized system where:
+
+The kernel is the core,
+The shell is your helper,
+Libraries and tools make things easier, and
+Apps run smoothly on top.
+
+=============================
+12-June-2025-AWS LINUX(Class2)
+============================
+
+1) create an ec2-instance and connect to it
+2) whoami: Shows the current logged-in username.
+
+(ec2-user)
+3) sudo su -
+whoami
+(root)
+
+4)hostname:  Displays the system's hostname.
+(displays private ip of server)
+
+5) changing the hostname
+(hostnamectl set-hostname Linux server)
+sudo su -
+
+hostname
+hostname -I (displays private ip of instance) Shows the IP addresses(local ip addresses) assigned to the machine
+
+
+6)uname: Just shows the kernel name (e.g., "Linux").
+uname -a : Shows all system information.
+7)date: displays date & time
+8) uptime: displays systems uptime (The uptime command in Linux displays how long the system has been running, along with load averages and other basic system stats.
+
+)
+===================
+create files
+touch file1 file2 file3
+
+create directories
+mkdir dir1 dir2 dir3
+
+remove files/directories
+rm -rf <filename>/<directory name>
+
+pwd: present working directory
+clear or ctrl+L: CLEAR SPACE
+ls, ls -a, ls -lrth: lists files, lists hidden files, lists long-listing files
+
+cd --> change directory
+cd .. --> Go to the parent directory of the current directory.
+cd . --> refers to the current directory.
+cd ~ --> Go to the home directory of the current user.
+~ is a shortcut for your home directory.
+
+cd - --> go to previous directory
+
+vi or vim: editor files
+
+cat <filename> --> display content in a file
+
+To install:
+
+yum install java -y
+yum install git -y
+
+history: executed commands till now
+
+==============================
+13-June-2025: AWS LINUX - (Class3)
+============================
+1) Create an ec2-instance and connect using git bash
+
+2) root user is the highest user with all permissions
+root directory is the top directory
+
+cd / ==> change to root directory
+pwd
+ll
+
+===============================
+
+📘 Definition of Filesystem Hierarchy Standard (FHS) in Linux
+The Filesystem Hierarchy Standard (FHS) is a set of rules and guidelines that define how directories and files are organized in Linux and other Unix-like operating systems.
+
+It standardizes the structure of the filesystem so that:
+
+Users know where to find things (like configuration files, programs, logs, user data).
+
+Software developers know where to install or look for files.
+
+System administrators can manage systems consistently across different Linux distributions.
+
+🔧 Purpose of the FHS
+Ensures consistency across Linux systems.
+Makes it easier to manage, update, and back up systems.
+Helps avoid conflicts between system files, user files, and third-party software.
+
+🗂️ In Simple Terms
+The FHS says "Put this type of file in this folder", like:
+Programs go in /bin or /usr/bin
+Config files go in /etc
+User files go in /home
+Temporary files go in /tmp
+
+The FHS is maintained by the Linux Foundation, and almost all Linux distributions follow it.
+
+🗂️ Top-Level Folders (Starting from /)
+Folder	What it’s for
+/	The root. Everything starts here. It's like the main folder of your Linux system.
+/bin	Basic commands like ls, cp, mv – things every user needs.Essential user command binaries (e.g., ls, cp, mv) needed in single-user mode.
+/sbin	System commands for the administrator (like reboot, fsck).Essential system binaries (e.g., fsck, reboot) for system maintenance.
+/lib	Libraries (shared code) used by /bin and /sbin programs.
+/etc	Configuration files for your system (like settings).
+/dev	Devices like hard drives, printers, etc. shown as files.Device files (e.g., /dev/sda, /dev/null).
+/proc	Virtual filesystem providing process and kernel information as files.
+/sys	Virtual filesystem exposing kernel device info and settings.
+/tmp	Temporary files – auto-deleted after reboot.
+/usr	Most of your installed programs and files live here.It contains user-related programs and files
+/var	Variable data files like logs, print jobs, emails. or log files
+
+🧰 Other Important Folders
+Folder	What it’s for
+/boot	Files needed to start your system (like the kernel).Static files for bootloader (e.g., kernels, initrd).
+/home	Your personal files – every user gets a folder here. User home directories.
+/root	Home directory for the root user. (not the same as /).
+/media	Mount point for removable media (e.g., USB drives, CD-ROMs)./media is where Linux automatically mounts removable storage devices so users can easily access them.
+/mnt	/mnt is a default directory in Linux used for temporarily mounting filesystems.(like another drive).for manual mounting
+/opt	Optional software (like 3rd-party apps).
+/run	Data the system needs while it's running (like PIDs).
+/srv	Data used by services (like a web server's files).
+
+
+Mounting = Making a device accessible as a folder.
+Mount means connecting a storage device (like a hard drive, USB, CD, or partition) to the Linux file system so you can access its files.
+
+**********************************************
+cd /opt/
+pwd
+touch f1 f2 jenkins docker
+mkdir dir1 dir2
+ll
+rm -rf f2 dir2
+ll
+
+Nested directory structure:
+------------------
+mkdir -p command is used.
+
+i want folder b in folder a
+folder c in folder b
+folder d in folder c
+folder e in folder d
+
+mkdir -p a/b/c/d/e
+
+To display in pictorial representation:
+
+yum install tree -y
+
+tree
+
+mkdir chiru naga
+touch venky balayya
+cd chiru
+touch ram varun
+cd ..
+cd naga
+mkdir nagachai Akhil
+cd ..
+
+tree
+--------------
+copy: copy and paste
+cp -rp <source_path> <destination_path>
+
+eg: i want to copy docker file in Akhil folder
+
+cp -rp /opt/docker /opt/naga/Akhil/docker ---> absolute_path
+or
+cp -rp docker naga/Akhil/docker ----> relative_path
+
+move: cut and paste, also used to rename files
+mv <source_path> <destination_path>
+
+---------------------------------
+User related commands:
+
+create user: useradd hyma or adduser hyma
+create password for the user: passwd hyma
+check user configurations: cat /etc/passwd
+how to enter into the user or switch user: su - hyma
+whoami
+
+exit (to logout from the user)
+
+2) create another user
+useradd harshi
+cat /etc/passwd
+
+3) root user: 0 (System User ID)
+   system users: below 1000 (<1000)
+   human users: above 1000 (>=1000)
+
+4) UserStanga
+
+ec2-user:x:1000:1000: EC2 Default User:/home/ec2-user:/bin/bash
+hyma:x:1001:1001::/home/hyma:/bin/bash
+
+Syntax ----> <username>:<password>:<userID>:<GroupID>:<comment>:<user home directory>:<shell>
+
+cd /
+cd home/
+ll
+
+how to give comment to user
+-----------
+
+usermod -c "DevOpsUser" hyma
+cat /etc/passwd
+
+userdel -r harshi  --> to delete the user
+adduser or useradd – Add a new user.
+deluser or userdel – Delete a user.
+passwd – Change a user’s password.
+usermod – Modify user account details.
+id – Display user ID (UID) and group ID (GID).
+su – Switch user (usually to root).
+sudo – Execute a command as another user (commonly root).
+
+
+1)Root users(super user): Has full control over the entire system. System administration, all tasks
+Highest privilege level
+UID: 0
+Can:
+Create, delete, and modify any file or user
+Install and remove software
+Start or stop system services
+Change system settings
+
+2)Administrative Users (Sudo Users): Regular users who are granted administrative privileges, typically via the sudo command.
+Regular users with elevated privileges
+Can perform root-level tasks using sudo
+UID: usually starts at 1000 and above
+typical tasks:
+Updating software
+Managing users
+Changing system settings (with sudo)
+
+3)Normal Users (Regular Users): End users who use the system for day-to-day activities. Personal work, app usage
+Have limited permissions, typically confined to their own home directories.
+UID: usually starts at 1000 and above
+
+Can:
+Access their own home directories
+Run user-level applications
+Modify files they own
+
+
+4. System Users / Service Accounts:
+Used internally by the system or background services (e.g., mysql, www-data)
+
+Typically have:
+
+UID < 1000 (or UID range reserved for system users)
+No login shell or home directory
+
+Purpose:
+Run specific system services safely under restricted privileges
+
+----------------------------------------
+tail: Show the End of a File
+
+Show the last 15 lines:
+tail -n 15 filename.txt
+tail -c 10 filename.txt   (for bytes)
+Follow a log file in real time (great for monitoring):
+tail -f /var/log/syslog
+
+eg: tail -3 /etc/passwd
+
+
+
+head: Show the Beginning of a File
+
+Show the first 5 lines:
+head -n 5 filename.txt
+head -c 10 filename.txt   (for bytes)
+
+eg: head -3 /etc/passwd
+---------------------------------
+
+✅ more: 
+Displays text one page at a time, but only allows forward navigation.
+Basic pager that shows text one page at a time.
+more <filename>
+
+✅ less :
+Displays text one page at a time, with forward and backward navigation.
+Advanced pager; more powerful and flexible than more.
+less <filename>
+
+
+if we see (END), press q to exit
+=============================
+
+wc (word count):
+
+The wc command is used to count:
+
+Lines  --> wc -l
+Words  --> wc -w
+Characters --> wc -m
+bytes --> wc -c
+Length of the longest line: wc -L
+
+eg: wc <filename.txt>
+
+wc /etc/passwd
+
+(lines, words, characters /etc/passwd)
+
+---------------------------------
+
+To install and remove packages:
+
+yum install java -y
+yum remove java -y
+
+---------------------------------
+
+14-15th june-Noclass
+
+16th June 2025- (Class-4)
+====================================
+
+1) create an ec2 instance aand connect to it using git bash
+2) sudo su -
+3) sudo hostnamectl set-hostname linuxserver
+4) sudo su -
+5) cd /opt
+6) ll
+7) touch <filename> --> creates an empty file
+8) file editors in Linux: vi/vim or nano (it creates a file and we can add content)
+ vim filename
+esc --> i
+---data----
+---data----
+---data----
+esc:wq (save and quit)
+esc:q--> withoutsave, quit
+esc:q! (quit forcefully)
+
+9) Shortcuts used in Linux:
+=====================
+vim Jenkins
+---
+put some content
+
+---
+
+esc:w and hit enter
+
+
+use "escape(Esc) " before below command
+gg --> top line
+G --> Ground line
+yy --> copy
+n times yy (no.of lines you want to copy)
+p --> paste
+dd --> delete a line
+n-dd (no.of lines you want to delete)
+u-undo
+dw-delete word
+
+set nu  --> esc:set nu --> displays numbers
+set nonu --> esc:set nonu --> remove numbers
+/ --> esc /java --> to search java in filename
+n --> next
+
+===========
+
+10) diff file1 file2 --> compare differences in two files
+sdiff file1 file2 --> compare by displaying in side by side
+
+------------
+
+11) creating file in 3 ways: 1) using touch command  2) using vi/vim
+    3) using echo
+
+eg: echo "hello world" > test  (create a new file with content)
+Syntax: echo <content> > <filename>
+
+echo "hello world, am good" >> test (to append the content or add --> use >>)
+-------------------
+
+12)top: The top command in Linux shows a real-time view of the system’s performance, including CPU usage, memory usage, and running processes.
+ Syntax: top
+🧾 Top Command Column Breakdown (Simple Terms)
+Column	Full Name	What It Means (Simple)
+PID	Process ID	Unique ID of the process
+USER	User Name	Who owns the process
+PR	Priority	Priority of the process (lower = more important)
+NI	Nice value	A way to adjust process priority (-20 to +19; lower = higher priority)
+VIRT	Virtual Memory	Total memory the process can access (including swapped out)
+RES	Resident Memory	Actual physical RAM used (not swapped)
+SHR	Shared Memory	Memory shared with other processes
+S	Status		Process status (e.g. R = running, S = sleeping, Z = zombie, etc.)
+%CPU	CPU Usage	How much of the CPU this process is using
+%MEM	Memory Usage	How much of the physical memory it's using
+TIME+	CPU Time	Total CPU time the process has used since it started
+COMMAND	Command		The name of the command or program running
+
+Example Output (simplified)
+
+  PID USER     PR  NI  VIRT   RES   SHR S  %CPU %MEM   TIME+   COMMAND
+ 1234 root     20   0  500m  30m   10m  S   2.0  1.5   00:01.23 apache2
+ 5678 john     20   0  200m  15m    5m  R  50.3  0.8   00:10.45 python
+
+apache2 is using 2% CPU and 1.5% of memory
+python is actively running (R) and using 50.3% CPU
+=================================
+
+13) lscpu : This shows CPU details in a clean, human-readable format.
+shows detailed information about your CPU (processor)
+
+14) free: The free command in Linux shows how much memory (RAM and swap) your system is using and how much is free.
+✅ Common free Command Options
+Option	What It Does (Simple Terms)
+-h	Human-readable: shows sizes in KB/MB/GB instead of bytes
+-b	Show memory in bytes
+-k	Show memory in kilobytes (default)
+-m	Show memory in megabytes
+-g	Show memory in gigabytes
+
+=================================
+15) wget: download files from the internet using the command line.
+   wget <URL>
+
+Save with a new name
+wget -O myfile.pdf https://example.com/report.pdf
+
+ unzip – Extract .zip Files
+➤ Basic Syntax
+unzip myarchive.zip
+
+
+📦 zip – Compress Files into .zip
+➤ Basic Syntax
+zip myarchive.zip file1 file2 folder/
+
+zip -r myfolder.zip myfolder/
+(-r means recursive, include all files/folders inside)
+
+tar: Archive Tool 
+The tar command is used to create and extract archives in Linux.
+Think of it like packing or unpacking a box of files 📦.
+
+📌 What is an Archive?
+English Meaning: A single file that contains many files/folders grouped together.
+(Like zipping everything into one file, but using tar instead of zip.)
+
+✅ Create a .tar archive (pack files)
+tar -cvf archive.tar.gz file1 file2 folder/
+
+✅ Extract (unpack) a .tar archive
+tar -xvf archive.tar.gz
+
+=========================
+grep: used to "search for text in files" or output.
+Finding what’s inside files
+Syntax: grep "search_word" filename
+
+-i --> ignore case
+-r --> Search recursively in directories
+
+2. Case-insensitive search
+grep -i "hello" file.txt
+Finds "hello", "HELLO", "HeLLo", etc.
+
+3. Search recursively in all files in a folder
+grep -r "main" /path/to/folder/
+Searches for "main" in all files inside the folder and subfolders.
+
+4 grep -iR "hyma" : searches in current folder and all subfolders (i-ignore case, R recursively)
+===============================
+
+find: The find command is used to "search for files and directories in your system".
+Finding where files are
+
+Syntax: find <path> <conditions>
+eg: find /home/user -name "file.txt"
+🔍 Searches for a file named file.txt inside /home/user
+
+find / -name docker -type f -->(find only files)
+find / -name docker -type d  --> find only directories
+
+=================================
+
+sed : replace text
+
+The sed command stands for Stream Editor.
+It is used to find and replace text, edit lines, or filter content in files or input — without opening a text editor.
+
+
+✅ Basic Syntax
+sed 'command' filename
+
+🔧 Most Common Use: Find and Replace Text
+sed 's/old/new/' file.txt
+
+s = substitute
+old = text to find
+new = text to replace with
+
+Only replaces the first match on each line
+
+📌 Examples
+1. ✅ Replace "apple" with "orange" in a file
+sed 's/apple/orange/' fruits.txt
+
+2. ✅ Replace all matches on each line (not just the first)
+sed 's/apple/orange/g' fruits.txt
+g = global (replace all occurrences on a line)
+
+3. ✅ Save changes to a new file (don't change original)
+sed 's/apple/orange/g' fruits.txt > new_fruits.txt
+
+4. ✅ In-place edit (change file directly)
+sed -i 's/apple/orange/g' fruits.txt
+
+================================
+'s/old/new/' --> replace first occurrence of old with mew in each line
+
+'s/old/new/g' ---> replace all occurrences of old with mew in each line
+
+'s/old/new/2' ---> replace second occurrence of old with mew in each line
+
+
+sed 's/userstanga/madhustanga/' jenkins  > jenkins2file
+
+replaced content will save in jenkins2 file through stream editor.
+--------------------
+***
+
+Use grep when looking for specific text inside files.
+
+Use find when searching for files or folders.
+
+zip: compresses (to make file size smaller)
+Compression is the process of reducing file size by encoding it more efficiently, without losing data.
+zip myfile.zip file1 file2
+
+tar: An archive is the process of combining multiple files or folders into a single file, without reducing size.
+tar -cf myfiles.tar file1.txt file2.txt
+
+Command		Meaning	Output 			file	
+tar -cvf	Archive only			backup.tar
+tar -czf	Archive + gzip compress		backup.tar.gz
+
+gzip: gzip is a Linux command used to compress a single file. It creates a .gz compressed file.
+gzip log.txt     → log.txt.gz
+gunzip log.txt.gz → log.txt
+===================================
+
+17-june-2025 --> No class
+
+18-June-2025 - (Class-5)
+=========================
+1) create a e2 instance with t2.micro and connect to it using git bash
+2) change hostname and switch from ec2-user to root user
+sudo su -
+hostnamectl set-hostname linuxserver
+sudo su -
+
+Note: A mounting point is just a folder (directory) where a storage device (like a hard drive, USB, or CD, or even file system) is 
+connected so you can access its files.
+Mount point = the folder where your device shows up.
+
+Think of it like this:
+Your USB drive has files on it.
+But Linux can’t use them until it “attaches” the USB to a folder.
+That folder is called the mount point.
+
+Example:
+You plug in a USB drive, and Linux mounts it at:
+
+/media/user/myusb
+Now, /media/user/myusb is the mount point — go there to see and use the USB files.
+
+--------------------
+3) lsblk:
+list information about block devices — like hard drives, SSDs, USB drives, and their partitions — in a tree-like structure.
+
+It’s very useful for:
+Checking what storage is connected
+Finding where USBs or partitions are mounted
+Troubleshooting disk-related issues
+
+4) df Command in Linux – Disk Space Usage
+The df command stands for "disk free", and it shows the amount of disk space used and available on mounted filesystems.
+
+df --> shows disk usage in blocks (in bytes --> hard to read) 
+df -h --> Show disk usage in a clear, human-readable format — it shows sizes in KB, MB, GB, etc.
+----------------------------
+cd /opt
+vim linuxcommands
+(add some content)
+ll
+(here we can see content storage, how to check entire file(along with its metadata) size)
+
+5) du : disk usage
+
+The du command stands for "disk usage", and it shows how much space files and directories are using — unlike df, which shows disk partitions.
+This is the most common usage to check how much space a folder uses.
+
+eg: du -h <filename> 
+ du -sh <filename>
+
+Command	What it shows
+du	Size of directories (in blocks)
+du -h	Sizes in KB/MB/GB for all subfolders/du -h → Human-readable
+du -sh	Total size of current (or specified) folder/ Summary in human-readable format
+du -h --max-depth=1 <filename> eg: du -h --max-depth=1 aws  (levels)
+
+---------------------------
+cd /opt
+useradd hyma
+useradd harshi
+cat /etc/passwd
+(by default group id also created for respective users)
+cat /etc/group
+
+
+file permissions:
+-----------------------
+Levels in File Permissions in Linux
+In Linux, file permissions operate at three levels, defining who can access a file and what they can do with it.
+
+🧍 1. User (Owner)
+The person who created the file or directory.
+Has the most control by default.
+Set using chown.
+
+🔹 Example:
+If you are the creator of notes.txt, you are the owner, and your permissions apply under "user".
+
+👥 2. Group
+Every file belongs to a group.
+Other users who are part of that group get permissions defined under the group level.
+
+Set using chgrp.
+
+🔹 Example:
+If a file belongs to the group devs, all users in devs group will get group-level access.
+
+🌍 3. Others (World)
+Any other users on the system who are not the owner or in the group.
+
+They get permissions set under "others".
+
+📘 Permission Types at Each Level:
+For each level (User, Group, Others), there are three types of permissions:
+
+Symbol	Permission	Meaning
+r	Read		Can read/view file contents
+w	Write		Can modify or delete file
+x	Execute		Can run the file (if it’s a script or program)
+
+🔍 Example: Understanding with ls -l
+
+-rwxr-xr-- 1 alice devs  1234 Jun 27  report.sh
+
+Field		Meaning
+-rwx		User (owner: alice) → read, write, execute
+r-x		Group (devs) → read, execute
+r--		Others → read only
+
+🔑 Summary: Permission Levels
+Level		Who it applies to		Example
+User		File owner			chmod u+x file
+Group		Users in file's group		chmod g-w file
+Others		All other system users		chmod o+r file
+
+=============================
+
+In Linux, there are three main ways to give or set file permissions:
+
+1)  1. Symbolic (Text) Method : You use letters like r (read), w (write), x (execute) along with u, g, o, a to define permissions.
+
+Symbol	Meaning
+u	user (owner)
+g	group
+o	others
+a	all (u+g+o)
+r	read
+w	write
+x	execute
+
+➤ Format:
+chmod [who][+/-=][permission] filename
+
+📘 Examples:
+
+chmod u+x script.sh       # Add execute permission to user
+chmod g-w notes.txt       # Remove write permission from group
+chmod o=r file.txt        # Set read-only permission for others
+
+✅ 2. Octal (Numeric) Method
+You use 3-digit numbers to set permissions for user, group, and others.
+
+➤ Format:
+chmod [###] filename
+
+📘 Examples:
+chmod 755 script.sh     # rwxr-xr-x
+chmod 644 file.txt      # rw-r--r--
+chmod 777 myapp         # rwxrwxrwx (full permission)
+
+Number	Permission
+0	--- (no access)
+1	--x
+2	-w-
+3	-wx
+4	r--
+5	r-x
+6	rw-
+7	rwx
+
+3) using ACL (Access Control lists)
+
+======================================
+
+chmod --> chmod stands for "change mode", and it's used to set or change file permissions in Linux.
+
+✅ Purpose:
+To control who can read, write, or execute a file or directory.
+
+chmod ugo <filename>  --> here u --> user  g--> group o--> other
+----------------------------------------
+chown --> The chown command stands for "change owner".
+It is used to change the owner and/or group of a file or directory.
+
+✅ Purpose:
+To give ownership of a file or folder to a different user or group.
+
+🧾 Summary Table:
+Task				Command
+Change owner			chown user file
+Change group			chown :group file
+Change owner and group		chown user:group file
+Recursive ownership change	chown -R user:group folder/
+change owner and group for 
+multiple files			chown user: group file1 file2 file3
+---------------------------------------
+
+eg: chown <user>:<group> <filename>
+
+-------------------------------------
+🔹 What is a Group in Linux?
+A group in Linux is a way to manage permissions for multiple users at once.
+
+Every file or folder has an owner and a group.
+
+If you're part of a group that owns a file, you may be allowed to read, write, or execute it (depending on permissions).
+
+Groups make it easier to manage who can access what.
+
+
+Create a New Group:
+----------
+groupadd <groupname>
+eg: groupadd devops
+
+cat /etc/group
+
+Add users to group:
+------------
+usermod -aG groupname username
+usermod -aG devops Madhu
+usermod -aG devops Shwetha
+
+cat /etc/group
+
+ How to Remove a User from a Group
+------------------------------
+ gpasswd -d username groupname
+
+List all groups on the system
+------------------
+getent group
+
+See what groups a user belongs to
+----------------------
+groups username
+
+========================================
+
+ps stands for Process Status. It shows the currently running processes on your system.
+
+Basic ps command:
+ps
+🔸 Shows only the processes running in the current terminal (your shell).
+
+🔹 What is ps -ef?
+ps -ef
+This is a more detailed and complete view of all running processes.
+
+What it shows:
+All processes on the system
+
+Information like:
+
+UID (user running the process)
+PID (process ID)
+PPID (parent process ID)
+CMD (the command that started the process)
+
+🔹 What do the -e and -f mean?
+Option		Meaning
+-e		Show all processes
+-f		Full format (more details shown)
+
+✅ Summary
+Command			What it does
+ps			Shows your current shell's processes
+ps -ef			Shows all system processes with full details
+
+==============================
+The kill command in Linux is used to send signals to processes, most commonly to stop (terminate or kill) them.
+The kill command is used to stop a running program (process) by its PID (Process ID).
+
+✅ How to Kill a Process Normally
+This sends a polite request to stop.
+kill PID
+
+🔴 How to Kill a Process Forcefully
+If the process doesn’t stop with a normal kill, use:
+kill -9 PID
+
+Kill all processes with a name:
+pkill firefox
+
+🔹 List All Signals
+kill -l
+
+🔹 How to Find the PID of a Program
+Before killing a process, you need to know its PID (Process ID).
+
+You can find it using:
+ps -ef | grep programname
+
+ps -ef or ps -aux
+==============================
+
+🟢 ping Command — Check Network Connection
+Check if a host is reachable 
+
+Syntax: ping hostname_or_ip
+eg: ping google.com
+
+📌 Use it for:
+Checking if a server is up
+Testing your network connection
+Measuring response time (latency)
+
+----------------------------------
+
+🔵 telnet Command — Test Port Connection (Usually Disabled by Default)
+✅ What it does:
+Connects to a specific port on a remote server.
+Useful for testing if a service (like a web or mail server) is listening on a port.
+
+ Syntax:
+telnet hostname port
+🧪 Example:
+telnet google.com 80
+➡️ Tries to connect to Google on port 80 (HTTP).
+
+📌 Use it for:
+Testing if a port is open
+Checking if a service is running
+Basic network troubleshooting
+====================================
+netstat (short for network statistics) is a command-line tool used to monitor network connections, routing tables, interfaces, and more.
+
+🔧 Basic Syntax
+netstat [options]
+
+🔹 Commonly Used netstat Options
+Command			What It Does
+netstat -a		Shows all connections and listening ports
+netstat -tuln		Shows only listening TCP/UDP ports (numeric)
+netstat -p		Shows the program name/PID using the connection
+netstat -r		Shows the routing table
+netstat -i		Shows network interface stats
+
+🧪 Example: Show Listening Ports
+netstat -tuln
+t = TCP
+u = UDP
+l = listening
+n = numeric IPs and ports
+
+✅ Use ss instead (Faster modern alternative to netstat):
+ss -tuln
+
+netstat is used for in Linux:
+========================
+✅ Check active network connections
+See who your computer is connected to.
+
+🌐 View open and listening ports
+Find out which ports are being used and by what services.
+
+🛠️ Identify programs using the network
+See which processes or applications are using specific ports.
+
+📶 Monitor network interface statistics
+Track data sent and received on network interfaces.
+
+========================================
+
+19th-June-2025-(Class-6)
+=======================
+top and htop in Linux:  
+=====================
+The top and htop commands in Linux are used for monitoring system performance, particularly focusing on processes, CPU usage, memory usage, and other system statistics
+
+🔹 top Command:
+syntax: top
+Purpose: Displays a real-time view of system processes and resource usage.
+Lightweight and available on most Linux systems by default.
+
+🔹 htop Command:
+Purpose: An enhanced, interactive version of top with a more user-friendly interface.
+syntax: htop
+Note: htop might not be installed by default on all systems. Install it with:
+
+sudo apt install htop   # Debian/Ubuntu
+sudo yum install htop   # RHEL/CentOS
+sudo dnf install htop   # Fedora
+
+Interface:
+
+top has a basic, text-only display.
+htop has a colorful, user-friendly interface that's easier to read.
+
+Ease of Use:
+
+top requires typing commands to interact.
+htop lets you use arrow keys and function keys; it's more interactive.
+
+Features:
+
+top shows process info in a list.
+htop shows a tree view of processes and allows easy filtering and sorting.
+
+In short, htop is like an upgraded version of top that's easier and more pleasant to use.
+======================
+
+iostat: 
+
+The iostat command in Linux is used to monitor system input/output (I/O) performance, especially for disks (storage devices) and CPU usage.
+syntax: iostat
+
+In Simple Terms:
+iostat shows how busy your CPU and disks are.
+It helps you find out if your system is slow because of the disk or CPU overload.
+
+🔹 What It Shows:
+CPU usage – how much CPU is used for user processes, system tasks, idle time, etc.
+
+Disk I/O stats – how much data is being read from or written to your drives, and how busy they are.
+
+==========================
+difference between netstat, vmstat, iostat, top commands:
+********************************************************
+each used to monitor different aspects of system performance:
+🔹 1. netstat – Network Statistics
+Shows network connections, listening ports, routing tables, etc.
+Use it to check open ports, active connections, or network troubleshooting.
+
+Example:
+netstat -tuln   # Show listening ports
+
+🔹 2. vmstat – Virtual Memory Statistics
+Reports on memory usage, CPU performance, processes, and swap.
+Useful for spotting memory pressure or CPU bottlenecks.
+
+Example:
+
+vmstat 2   # Updates every 2 seconds
+
+🔹 3. iostat – Input/Output Statistics
+Focuses on disk I/O performance and CPU usage.
+Helps identify disk bottlenecks or high I/O wait.
+
+Example:
+iostat 2   # Updates every 2 seconds
+
+🔹 4. top – Real-Time Process Monitor
+Shows running processes, CPU, memory, and uptime.
+Interactive tool to monitor and manage processes in real time.
+
+Example:
+top
+
+📊 Quick Comparison Table:
+Command		Focus Area		Shows Info About			Use Case Example
+netstat		Network			Ports, connections, interfaces		See open ports and network activity
+vmstat		Memory & CPU		RAM, swap, CPU usage, process queues	Detect memory or CPU issues
+iostat		Disk & CPU		Disk reads/writes, CPU stats		Find disk bottlenecks
+top		Processes & System	Running processes, CPU, memory usage	Monitor live system performance
+
+===============================\\\\\\\\\\\\\
+
+inode(index node): An inode is a data structure used by Linux to store information about a file, except its name.
+
+
+Every file or folder on your system has an inode number.
+The inode contains metadata about the file:
+File size
+Owner (user & group)
+Permissions (read/write/execute)
+Timestamps (created, modified, accessed)
+Location of the file’s data on disk
+
+But not the file name or path — that’s stored separately in the directory structure.
+
+🔹 Why Are Inodes Important?
+Helps Linux track files efficiently, even if names are changed.
+You can have hard links (same inode, different names).
+You can run out of inodes even if you have disk space left!
+
+syntax:
+
+ls -i <filename>  --> to view inodes
+stat <filename> --> to view metadata
+
+=====================
+
+
+Soft link (Symbolic links): 
+ Soft Link (Symbolic Link)
+A soft link is like a shortcut or pointer to another filename.
+
+It stores the path to the original file.
+
+✅ Key Points:
+Has a different inode number.
+If the original file is deleted, the soft link becomes broken.
+Can link to files or directories.
+Can link across different filesystems.
+
+Use Case:
+When you want a link across directories or filesystems, or to link to directories, or just a convenient shortcut.
+Example: Linking config files from a central location, or linking directories.
+
+
+Syntax: ln -s original.txt softlink.txt
+Now softlink.txt just points to the name original.txt, not the data.
+
+hard links:
+
+🔹 Hard Link (Simple)
+It’s like having two names for the exact same file.
+Both names point directly to the same data on disk.
+If you delete one name, the file still exists under the other name.
+
+Use Case:
+When you want multiple filenames that behave exactly like the original file, and you want the file to remain accessible even if one name is deleted.
+Example: Backups or multiple references inside the same filesystem.
+
+
+Syntax: ln original.txt hardlink.txt
+Now both original.txt and hardlink.txt point to the same inode and data.
+
+============================
+cut and awk commands in file manipulations:
+********************************
+🔹 cut -d Command
+Used to extract specific columns or fields from lines of a text file or input.
+The -d option specifies the delimiter (separator) between fields, like a comma, colon, space, etc.
+
+Often used when dealing with structured text files like CSV or colon-separated files.
+
+Example:
+cut -d ',' -f 2 file.csv
+This extracts the 2nd column from a comma-separated file.
+
+use case: Simple column extraction from files
+
+awk:
+====
+use case: Complex data manipulation and filtering
+
+A powerful text-processing tool used to manipulate and analyze data line by line.
+It can split lines into fields (default delimiter is whitespace), perform calculations, filter data, and format output.
+More flexible than cut because it can do conditions, loops, math, and text replacement.
+
+eg: awk -F ',' '{print $2}' file.csv
+
+================================
+WinSCP and scp:
+==============
+🔹 scp (secure copy)
+A command-line tool in Linux used to securely copy files between computers over SSH.
+
+Works in the terminal.
+
+Syntax example:
+
+scp file.txt user@remote_host:/path/to/destination/
+Useful for quick file transfers between your local machine and a remote server.
+
+
+syntax: scp src dest 
+
+eg: scp -i madhu.pem Prabhas ec2-user@ec2-54-92-176-107.compute-1.amazonaws.com:/tmp/Prabhas
+
+-----------------------
+🔹 WinSCP
+A graphical user interface (GUI) application for Windows to transfer files securely over SSH/SFTP.
+
+Provides a visual file explorer to drag-and-drop files between local and remote systems.
+
+Great for users who prefer a graphical interface instead of command-line.
+
+Supports SFTP, SCP, FTP, WebDAV protocols.
+
+Quick summary:
+Tool	Type			Platform	Use Case
+scp	Command-line		Linux/Unix	Quick file copy via terminal
+WinSCP	GUI app			Windows		User-friendly file transfer
+
+===============================
+20-June-2025- (Class-7)
+=======================
+which: shows the executable path of the program
+The which command shows the full path of a command or program that is found in your current environment (your $PATH).
+
+eg: which git --> we will get path (/usr/bin/git), which ls ---> we will get ls path (/usr/bin/ls)
+which java
+
+🧠 Why it's useful:
+It tells you:
+Whether a command is installed.
+Where it's located (which version of the command you're using).
+Helps debug if there are multiple versions of a tool on your system.
+
+whereis:  
+To see all locations of a command
+The whereis command locates the binary, source, and man page for a command.
+
+eg: whereis git (it displays git: /usr/bin/git /usr/share/man/man1/git.1.gz) , whereis java
+This tells you:
+
+/usr/bin/git → the actual program
+/usr/share/man/... → the manual page location
+
+man: It stands for "manual" and provides documentation directly from the terminal.
+
+The man command shows manuals (help pages) for other commands in Linux. It's like a built-in instruction book for your terminal.
+✅ How to Use It:
+man command-name
+
+Example:
+man ls
+This shows the help manual for the ls command (which lists files).
+
+
+ifconfig: The ifconfig command is used to view and configure network interfaces on Linux systems.
+
+🔹 What does ifconfig do?
+Shows IP address, MAC address, and network status for interfaces like eth0, wlan0, lo, etc.
+Enables or disables a network interface.
+Sets IP addresses manually (usually on older systems).
+
+🔁 Summary:
+Task			Command
+View network interfaces	ifconfig or ip a
+Disable interface	ifconfig eth0 down
+Enable interface	ifconfig eth0 up
+Assign IP address	ifconfig eth0 192.168.x.x ...
+==============================
+
+curl vs wget: both are used to download data from the internet, but they have different strengths.
+
+
+curl: Use curl if you're working with APIs, sending data, or need fine control.
+The curl command is a powerful tool used to transfer data to or from a server using various internet protocols like HTTP, HTTPS, FTP, etc.
+🔹 curl is a versatile tool to download, upload, or test data transfers over the internet — especially useful for API testing and automation.
+
+Syntax: curl [options] URL
+
+🔽 curl download:
+curl -O https://example.com/file.zip
+
+🧾 curl API POST request:
+curl -X POST -d "name=John" https://api.example.com/add
+
+wget: Use wget if you're just downloading files or mirroring websites.
+🔹 wget is a powerful tool for downloading files and websites directly from the terminal.
+🔹 It’s ideal for automated downloads, scripts, or when you don’t want to open a browser.
+
+syntax: wget [options] URL
+
+🔽 wget download:
+wget https://example.com/file.zip
+
+🔸 When to Use What:
+Use Case			Recommended Tool
+Download a file quickly		wget
+Resume a large download		wget -c
+Mirror a whole website		wget -r
+Test or call a REST API		curl
+Send POST/PUT requests		curl
+Upload files with form data	curl
+Download with custom headers	curl
+
+===========================
+
+What is init in Linux?
+init (short for initialization) is the first process started when a Linux system boots.
+
+It initializes the system, sets up the environment, and starts essential services.
+
+It runs as process ID 1 (PID 1).
+
+In older Linux systems (SysVinit-based), init manages runlevels to decide which services to start.
+
+🚦 What are Runlevels?
+Runlevels are modes of operation in a Linux system.
+Each runlevel represents a different system state, like single-user mode, multi-user mode, reboot, etc.
+
+🔢 Standard Runlevels:
+Runlevel	Meaning						Description
+0		Halt						System shutdown
+1		Single-user mode				Maintenance mode (no networking, just root)
+2		Multi-user without networking			Rarely used
+3		Multi-user with networking			Command-line mode (no GUI)
+4		Undefined/custom				Not used by default — available for customization
+5		Multi-user with networking and GUI		Graphical mode (login screen)
+6		Reboot						Reboots the system
+
+
+🔸 How to View Current Runlevel:
+runlevel
+
+You’ll see output like:
+N 5
+Here, 5 means the system is currently in runlevel 5 (graphical mode).
+
+🔧 How to Change Runlevel Temporarily:
+
+init 3
+This switches the system to runlevel 3 (multi-user mode without GUI).
+
+⚠️ Warning: Changing to runlevel 0 or 6 will shut down or reboot your system.
+
+=================================
+🧑‍💻 Modern Systems (Systemd):
+Most modern Linux distros (Ubuntu, CentOS 7+, etc.) use systemd instead of traditional init.
+
+In systemd:
+
+Runlevels are replaced with "targets".
+
+Example mappings:
+
+runlevel 3 → multi-user.target
+
+runlevel 5 → graphical.target
+
+To check current target:
+systemctl get-default
+
+To change runlevel (target) in systemd:
+systemctl isolate multi-user.target
+
+============================================ LINUX END ======================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
