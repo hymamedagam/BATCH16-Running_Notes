@@ -1,0 +1,1296 @@
+23-June-2025: Shell Scripting(class-1)
+================================
+Shell Scripting: Shell scripting is a way to automate tasks on a computer by writing a series of command-line instructions in a file. These scripts are commonly used in Unix, Linux, and macOS systems (and also Windows, using tools like PowerShell or Git Bash).
+
+🧠 Think of it like this:
+If you type commands one by one in the terminal, that’s like cooking step-by-step.
+If you write all the commands in a script (a .sh file), you can run the whole recipe at once.
+
+✅ What Can a Shell Script Do?
+Create or delete files
+Run programs
+Install software
+Move files between folders
+Automate boring tasks
+
+📌 Key Points
+Shell scripts usually have a .sh extension (like script.sh)
+You need to give permission to run them: chmod +x script.sh
+You run them with: ./script.sh
+
+✅ Why Is Shell Scripting Popular?
+Automation
+It helps automate repetitive tasks like backups, software installation, file management, etc.
+
+Efficiency
+You can run many commands at once instead of typing them manually every time.
+
+Powerful and Flexible
+Can interact with files, processes, networks, and other programs.
+
+Built into Most Systems
+Unix-based systems come with a shell pre-installed (like Bash, Zsh, etc.).
+
+Widely Used by System Admins and Developers
+Ideal for DevOps, server management, testing, and scripting complex workflows.
+
+📅 Timeline Overview
+Year	Shell		Creator		Notes
+1971	Thompson Shell	Ken Thompson	First Unix shell
+1979	Bourne Shell	Stephen Bourne	Introduced scripting features
+1989	Bash		Brian Fox	Most popular to this day
+
+
+*************************Differences between Bash and Shell scripting:*********************
+--> Shell and Bash scripting are similar at the basic level, but Bash provides more features, making scripts easier and more powerful.
+
+1) shell: doesn't support arrays
+--> interpreter: #!/bin/sh
+--> highly portable
+
+
+2) bash: supports arrays
+ --> interpreter: #!/bin/bash
+--> less portable
+========
+1. Array Support
+In Shell scripting (sh), arrays are not supported. You can only work with single variables and simple strings.
+
+In Bash scripting, you can use arrays easily. Bash allows you to store multiple values in a single variable and access them using indices, which makes data handling much easier.
+
+2. Arithmetic Operations
+Shell scripting requires the use of external commands like expr to perform basic arithmetic. This is slower and less clean.
+
+Bash scripting supports built-in arithmetic using (( )) or $(( )). It's faster, cleaner, and supports more operators (like ** for power).
+
+3. String Manipulation
+Shell provides only basic string handling. For example, you can concatenate strings, but you can't easily convert them to uppercase or extract parts using advanced syntax.
+
+Bash, on the other hand, supports advanced string manipulation, such as changing case (${var^^}), substring extraction, and pattern replacement—all built-in.
+
+4. Portability
+Scripts written in sh are more portable, meaning they can run on almost any Unix-like system without modification.
+
+Bash scripts are less portable, because not all systems (especially embedded or minimal Unix systems) have Bash installed by default. However, Bash is very common on Linux and macOS.
+
+Summary
+Shell scripting and Bash scripting are very similar at the basic level, but Bash offers more modern features, making scripts easier to write and more powerful. If you need compatibility across many systems, use sh. If you want more scripting features, use bash.
+=======================
+✅ Comparison of Shell, Bash, and Python Scripting
+1. Purpose and Use Cases
+Shell (sh):
+Basic command-line scripting, great for simple automation, such as file handling, startup scripts, or system boot tasks.
+
+Bash (bash):
+More powerful version of shell scripting with advanced features like arrays, loops, conditionals, and arithmetic. Ideal for system administration, DevOps, and Linux scripting.
+
+Python:
+A general-purpose programming language with powerful libraries. Great for complex logic, data processing, web scraping, automation, APIs, and even full applications.
+
+2. Syntax and Complexity
+Shell:
+Very minimal and strict syntax. Good for short scripts but becomes hard to maintain as complexity increases.
+
+Bash:
+Easier than Shell with more scripting features, but still has quirky syntax compared to modern languages.
+
+Python:
+Clean, readable, and beginner-friendly syntax. Great for writing and maintaining larger and more complex programs.
+
+3. Speed and Performance
+Shell/Bash:
+Faster startup, as they're interpreted by the system shell. Good for quick, short tasks.
+
+Python:
+Slightly slower to start, but much better for handling data, logic, and complex workflows.
+
+4. Portability
+Shell:
+Highly portable (almost all systems have /bin/sh).
+
+Bash:
+Less portable than sh (not all systems have Bash installed).
+
+Python:
+Portable if Python is installed, but not always available by default on all systems (though it's common on macOS and Linux).
+
+5. Use Case Examples
+Shell:
+System boot scripts
+Cron jobs
+Simple file operations
+
+Bash:
+DevOps automation
+Backup scripts
+Software installation scripts
+
+Python:
+Data analysis
+Web automation
+API calls
+Machine learning
+Scripting with more logic
+🟢 Summary
+Use Shell for basic and highly portable tasks.
+Use Bash for powerful system automation with better scripting capabilities.
+Use Python when you need logic-heavy, scalable, or cross-platform automation.
+==================================
+**** Before shell and after shell scripting:
+
+✅ In Simple Terms:
+Before shell scripting: Everything was manual and repetitive.
+After shell scripting: You could automate tasks with scripts and let the computer do the work.
+
+🕰️ Before Shell Scripting (1960s–early 1970s)
+People had to type every command manually into the terminal.
+There was no way to save or automate tasks.
+Everything was done step-by-step, even if repeated daily.
+If you wanted automation, you had to write complex programs in assembly or C.
+It was slow, repetitive, and prone to mistakes.
+
+===================================
+IMP: ***********
+
+How did you manage shell scripting in your project? What were your roles and responsibilities?”
+
+==> “In my project, I was responsible for automating routine tasks using shell scripting to improve efficiency and reduce manual errors. My main roles included:
+
+Writing and maintaining shell scripts to automate processes like file management, backups, log rotation, and deployment.
+
+Ensuring scripts were reliable, error-handled, and easy to maintain by following good scripting practices.
+
+Collaborating with the team to understand automation needs and integrating shell scripts with other tools or systems.
+
+Testing scripts thoroughly in development environments before deploying them to production.
+
+Troubleshooting and optimizing existing scripts to improve performance and scalability.
+
+Overall, my role involved using shell scripting as a powerful tool to streamline workflows, save time, and improve the overall stability of our system operations.”
+
+-------
+Tools and Environments Used:
+“In my project, I worked mostly on Linux servers. I used shell scripts to automate routine tasks. I set up cron jobs to run these scripts automatically at specific times. I also used Jenkins to help with automated software deployment.”
+
+Example of Automated Task:
+“One task I automated was backing up log files every day. I wrote a script that zipped old logs (older than seven days), moved them to a backup folder, and deleted very old backups to save space. This script ran every night using a cron job, so the backups happened without anyone having to do it manually.”
+
+Challenges Faced and Solutions:
+“One challenge was making sure the scripts didn’t break if something unexpected happened, like a missing file or permission error. To fix this, I added error checks and logging so the script would report problems but keep running smoothly. I also made the scripts run faster and use less computer resources to avoid slowing down the servers.”
+
+===============================================
+
+1) connect to server and change host name
+2) cd /opt
+
+EXAMPLES:
+
+1) structurize devopsengineers skillsets:
+manual way: create files and folders one-by-one
+mkdir hyma
+cd hyma
+touch Jenkins
+touch tomcat
+touch ansible
+mkdir aws
+cd aws
+touch EC2
+touch EKS
+
+in shell scripting:
+
+vim devopsengineer.sh
+ (#!/bin/bash  --> shebang line
+  ### Author : Hyma
+  ### Date : 23 June 2025
+  ### Version : V1
+  ### Purpose : To create DevOps Engineer Folder Structure
+
+mkdir hyma
+cd hyma
+touch Jenkins
+touch tomcat
+touch ansible
+mkdir aws
+cd aws
+touch EC2
+touch EKS
+)
+
+chmod 744 devopsengineer.sh  --> provide executable permissions to the owner.
+
+./devopsengineer.sh  --> run the file.
+
+--> yum install tree -y
+--> tree
+=========================================
+
+2) Instead of doing same thing for multiple users in a manual way, we should automate it.
+
+manual way: change only name and execute the same script for multiple users one by one separately.
+
+
+Note:💡 What is a Variable in Shell Scripting?
+A variable is like a container that stores a value (like text or numbers) which you can use later in your script.
+Just like in math or other programming languages, variables help you store and reuse information.
+
+❗ Important Rules
+No space around = when assigning: name="Alex" ✅, name = "Alex" ❌
+Use $ to access the variable: $name
+Variable names are case-sensitive: NAME and name are different
+
+
+shell scripting:
+
+eg: vim devopsengineer.sh
+ (#!/bin/bash  --> SHEBANG or Hash-BANG line
+  ### Author : Hyma
+  ### Date : 23 June 2025
+  ### Version : V1
+  ### Purpose : To create DevOps Engineer Folder Structure
+
+echo "Enter the name of newly joined DevOps Engineer"
+read var_name
+
+mkdir $var_name
+cd $var_name
+touch Jenkins
+touch tomcat
+touch ansible
+mkdir aws
+cd aws
+touch EC2
+touch EKS
+)
+
+./devopsengineer.sh  (run script) or sh deveopsengineer.sh
+===========================
+
+3) set up Jenkins using shell scripting:
+
+vim jenkinssetup.sh
+(#!/bin/bash
+  ### Author : Hyma
+  ### Date : 23 June 2025
+  ### Version : V1
+  ### Purpose : To setup Jenkins
+
+sudo yum update –y
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo yum upgrade
+sudo yum install java-17-amazon-corretto -y
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+
+)
+
+--> chmod 744 jenkinssetup.sh
+--> ./jenkinssetup.sh
+================================
+server publicip: 8080
+--> check status of Jenkins: systemctl status jenkins
+
+
+4) setup tomcat using shell scripting
+
+vim tomcatsetup.sh
+(#!/bin/bash
+  ### Author : Hyma
+  ### Date : 23 June 2025
+  ### Version : V1
+  ### Purpose : To setup tomcat
+cd /opt
+yum install java -y
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.107/bin/apache-tomcat-9.0.107.tar.gz
+tar -xvf apache-tomcat-9.0.107.tar.gz
+cd /opt/apache-tomcat-9.0.107/bin
+./startup.sh
+)
+
+note: if Jenkins is already working, we can't access tomcat using 8080 port. port conflict will occur.
+hence, kill Jenkins process.
+ps -ef | grep Jenkins
+kill -9 <pid>
+
+systemctl stop jenkins
+
+note: to run tomcat, java is must.
+
+--> ./tomcatsetup.sh 
+--> server publicip: 8080
+
+==================================
+
+env: environment variables (user level, system level)
+
+ex: echo HOSTNAME  
+    echo $HOSTNAME --> pre-defined system variable (HOSTNAME)
+
+=====================================
+
+25-June-2025: Shell Scripting(class-2)
+================================
+1) create an ec2-instance and connect to it.
+cd /opt
+
+eg: vim devopsprofile.sh
+(#!/bin/bash
+##########
+ echo " Enter the name of the DevOps Engineer"
+read name
+mkdir $name
+cd $name
+touch ansible Jenkins docker aws
+mkdir aws
+cd aws
+touch ec2 rds efs
+
+)
+
+--> chmod 700 devopsprofile.sh
+--> ./devopsprofile.sh
+(we will get an error because both filename and directory name contains 'aws'.
+failed to create a directory. file 'aws' exists.
+--> tree
+(we willget outut as below:
+eg: hyma
+	|___ ansible 
+	|___ jenkins
+	|___ docker
+	|___ aws
+	|___ ec2
+	|___ rds
+        |___ efs
+===========================
+
+2) 🔍 What does it do?
+When you run a script with bash -x script.sh or add set -x inside a script, it prints each command and its expanded arguments to standard error (stderr) before executing it.
+--> debugging a script using bash -x.
+
+🛠 Use cases:
+Debugging complex scripts
+Finding where and why a script is failing
+Understanding flow of variable assignments and command expansions
+
+--> bash -x devopsprofile.sh
+
+In script also, we can place ---> set -x to debug through script.
+
+Debugging/Troubleshooting:
+
+--> set -x --> Turn on debugging, prints each command before it is executed.
+--> set +x --> Turn off debugging.
+--> set -e --> Exit on error, useful for error-handling; exits the script immediately if any command fails.
+============================
+3) The set -e option in shell scripting is used to make the script exit immediately if any command returns a non-zero (error) exit status.
+--> set -e ---> Exit script on any command failure
+
+eg: vim devopsprofile.sh
+(#!/bin/bash
+##########
+set -x
+set -e
+echo " Enter the name of the DevOps Engineer"
+read name
+mkdir $name
+cd $name
+touch ansible Jenkins docker aws
+mkdir aws
+cd aws
+touch ec2 rds efs
+
+)
+
+--> ./devopsprofile.sh
+===================
+4) In shell scripting, $1, $2, $3, etc. are positional parameters. They represent the arguments passed to the script when it is run.
+
+🧰 Related Special Variables:
+Variable	Description
+$#	Number of arguments passed to the script
+$@	All arguments as separate words
+$*	All arguments as a single word
+"$@"	Safely expands all args (preserves spaces)
+"$*"	Expands all args as one string
+$?      Exit status
+
+🧠 What are they?
+Symbol	Meaning
+$0	The name of the script itself
+$1	First argument
+$2	Second argument
+$3	Third argument
+...	More arguments
+
+eg: vim devopsprofile.sh
+(#!/bin/bash
+##########
+set -x
+set -e
+mkdir $1
+cd $1
+touch ansible Jenkins docker aws
+mkdir $2
+cd $2
+touch ec2 rds efs
+)
+
+--> ./devopsprofile.sh <arg1> <arg2>
+--> ./devopsprofile.sh sravani aws
+($1 --> sravani (first argument)
+($2 --> aws (second argument)
+
+============================
+I want to start tomcat and display the process  of tomcat also,
+
+eg: vim tomcatsetup.sh
+(#!/bin/bash
+###############
+cd /opt
+yum install java -y
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.107/bin/apache-tomcat-9.0.107.tar.gz
+tar -xvf apache-tomcat-9.0.107.tar.gz
+cd /opt/apache-tomcat-9.0.107/bin
+./startup.sh
+)
+
+--> ./tomcatsetup.sh
+--> ps -ef | grep tomcat | head -1 | awk -F" " '{ print $2 }'
+--> vim tomcatsetup.sh
+
+(#!/bin/bash
+###############
+cd /opt
+yum install java -y
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.107/bin/apache-tomcat-9.0.107.tar.gz
+tar -xvf apache-tomcat-9.0.107.tar.gz
+cd /opt/apache-tomcat-9.0.107/bin
+./startup.sh
+echo "TOMCAT PROCESS ID IS:"
+ps -ef | grep tomcat | head -1 | awk -F" " '{ print $2 }'
+
+)
+--> bash -x tomcatsetup.sh
+===============================
+eg: vim sum.sh
+  (#!/bin/bash
+   ############
+  echo "Enter the first number"
+  read num1
+  echo "Enter the second number"
+  read num2
+  sum=$(( num1 + num2 ))
+  echo "Sum of two numbers is = $sum"
+)
+
+--> chmod 700 sum.sh
+--> ./sum.sh
+
+eg: cp -rp 2-sum.sh
+
+(#!/bin/bash
+   ############
+   num1=$1
+   num2=$2
+   sum=$(( num1 + num2 ))
+  echo "Sum of two numbers is = $sum"
+)
+--> bash -x 2-sum.sh 5 4
+output: 9
+
+===================================
+26 June 2025 --> (class-3)
+===================================
+command line arguments/positional arguments:
+
+eg: vim sum.sh
+   (#!/bin/bash
+    ###################
+   
+    num1=$1
+    num2=$2
+    sum=$(( num1 + num2 ))
+    echo " The Sum of 2 numbers = $sum"
+    echo "the 3rd argument is $3"
+    echo "Number of arguments passed: $#"
+    echo "All the arguments passed - as SINGLE word: $*"
+    echo "All the arguments passed - as individual word: $@"
+    echo "the Shell script name is - $0"
+    echo "Exit status is: $?"
+  )
+
+--> bash -x sum.sh 10 15 30 (or) ./sum.sh 10 15 20
+
+Note: echo $?
+--> status(success/failure) of last executed command.
+ 0 --> success
+non-zero --> failure
+
+==================
+
+Variables:
+-----------
+LOCAL VARIABLES: Defined within a specific function or script. They are temporary and only accessible within their scope.
+exist only in the current shell and are not passed to other scripts or programs.
+
+ENVIRONMENT VARIABLEs: Set using export, available system-wide, and accessible by any child process.
+These are global variables that are available to the current shell and any child processes. eg: PATH, HOME, USER.
+
+SHELL VARIABLES: Defined in the current shell session. If not exported, they are not accessible to child processes.
+These are built-in variables set by the shell itself. eg: $0, $1, $2....
+
+===========
+env
+echo $HOSTNAME
+echo $USER
+
+NOTE: export:  In shell scripting, export is used to make a variable available to child processes (e.g., subshells or commands/scripts you run from the current shell).
+
+to create environment variable:
+--------------
+export VAR_COURSE=AWSDEVOPS
+echo $VAR_COURSE
+
+User specific environment variables : Set only for a single user. Only applies to that user. example file: ~/.bashrc, ~/.profile
+============
+/root
+pwd
+ls -la
+vim .bash_profile
+(export INSTITUTE=MC
+export COURSE=AWSDEVOPS
+)
+
+source .bash_profile
+
+echo $COURSE
+echo $INSTITUTE
+
+sudo su -
+
+echo $COURSE
+echo $INSTITUTE
+---------------------
+sudo su - ec2-user
+pwd
+echo $COURSE
+(we can't get the output. we need to set variable in ec2-user's home directory)
+ls -la
+vim .bash_profile
+(export COURSE=AWSDEVOPS
+)
+--> source .bash_profile
+--> echo $COURSE
+
+System-wide env variables:
+---------------
+Used to set defaults for all users.
+Available to all users and system processes. Entire system. 
+eg: /etc/environment, /etc/profile
+
+sudo su -
+cd /etc
+ls environment
+vim environment
+(export TRAINER=Madhukiran
+)
+
+--> source environment
+--> echo $TRAINER
+----------------------
+sudo su - ec2-user
+cd /etc
+ls environment
+source environment
+echo $TRAINER
+--------------------
+printenv TRAINER
+printenv COURSE
+
+-----------
+PATH VARIABLE: It's an environment variable. Tells shell where to find commands.
+-----------
+--> 
+
+env
+env | grep USER
+env | grep TRAINER
+env | grep PATH
+
+sudo su -
+
+env | grep PATH
+
+======================================
+28 June 2025- (Class-4)
+=========================
+🔑 Common Operators:
+🔢 1. Numeric Conditions
+Used to compare numbers.
+
+Expression	Meaning
+-eq	Equal to
+-ne	Not equal to
+-lt	Less than
+-le	Less than or equal to
+-gt	Greater than
+-ge	Greater than or equal to
+
+🔤 2. String Conditions
+Used to compare text strings.
+
+Expression	Meaning
+=	Strings are equal
+!=	Strings are not equal
+-z STRING	String is empty
+-n STRING	String is not empty
+
+📁 3. File Conditions
+Used to check file types and properties.
+
+Expression	Meaning
+-e FILE		File exists
+-f FILE		Is a regular file
+-d FILE		Is a directory
+-r FILE		Is readable
+-w FILE		Is writable
+-x FILE		Is executable
+-s FILE		File is not empty
+
+🔀 4. Logical Conditions
+Used to combine or reverse conditions.
+
+Operator	Meaning
+!	NOT (negation)
+-a	AND (both must be true)
+-o	OR (at least one is true)
+
+💡 5. Compound Expressions (with [[ and (( in Bash)
+[[ ... ]] is used for string and file comparisons (more powerful and safer).
+
+(( ... )) is used for arithmetic comparisons.
+
+===============
+Operations: Operations in shell scripting are actions you perform on data — such as numbers, strings, files, or conditions — to make decisions, calculate values, or manipulate information during script execution.
+
+In simple terms:
+
+Operations = things you do with data inside your script.
+
+
+
+🔢 1. Arithmetic Operations
+Used to do basic math with numbers.
+
+Operators:
+Operator	Meaning
++	Addition
+-	Subtraction
+*	Multiplication
+/	Division
+%	Modulus (remainder)
+
+Example:
+a=10
+b=5
+
+result=$((a + b))
+echo "Sum is: $result"
+
+🔤 2. String Operations
+Used to manipulate or compare strings.
+
+Common operations:
+Operation	Example			Description
+Concatenation	name="Hi, $user"	Join strings
+Length		${#str}			Get string length
+Substring	${str:1:3}		Get part of string
+Comparison	[[ "$a" == "$b" ]]	Compare two strings
+
+Example:
+
+str="hello"
+echo "Length: ${#str}"
+
+📁 3. File Operations
+Used to check the properties of files and directories.
+
+File test operators:
+Operator	Description
+-e	File exists
+-f	Regular file
+-d	Directory
+-r	Readable
+-w	Writable
+-x	Executable
+-s	Not empty
+
+Example:
+if [ -f "myfile.txt" ]; then
+  echo "File exists"
+fi
+
+🔀 4. Logical Operations
+Used to combine conditions (like in if statements).
+
+Operators:
+Operator	Meaning		Example
+&&		AND		[ "$a" -gt 5 ] && [ "$b" -lt 10 ]
+`				`
+!		NOT		! [ -f "file.txt" ]
+
+🧠 5. Relational Operations (for numbers)
+Used to compare integers.
+
+Operators:
+Operator	Meaning
+-eq		Equal
+-ne		Not equal
+-lt		Less than
+-le		Less than or equal
+-gt		Greater than
+-ge		Greater or equal
+
+Example:
+a=5
+b=10
+if [ "$a" -lt "$b" ]; then
+  echo "a is less than b"
+fi
+
+🧮 6. Assignment Operations
+Assign values to variables.
+
+Example:
+x=10       # Assign 10 to x
+name="Sam" # Assign string to name
+No space on either side of =
+
+⛏️ 7. Bitwise Operations (using (( )) for arithmetic)
+Operator	Description
+&		AND
+`		`
+^		XOR
+~		NOT (bitwise)
+<<		Left shift
+>>		Right shift
+
+Example:
+
+a=5  # 0101
+b=3  # 0011
+echo $((a & b))  # Output: 1
+
+✅ Summary Table:
+Type		Common Use				Tools Used
+Arithmetic	Math with numbers			(( )), expr, $(( ))
+String		Compare, extract, join strings		[[ ]], ${#var} etc.
+File		Check file properties			[ -f file ], etc.
+Logical		Combine conditions			&&, `
+Relational	Compare integers			-eq, -lt, etc.
+Assignment	Store values				=
+Bitwise		Bit-level math (rare)			(( ))
+----------------------------
+Example:
+==================================
+
+
+CONDITIONAL EXPRESSION : you use in script to make decisions. A conditional expression checks if something is true or false. 
+
+Syntax:
+
+if [ condition1 ]; then
+                    # Code to execute if condition is true
+    echo "Condition is true"
+	 
+elif [condition2 ]; then	
+	echo "Condition is true"
+	
+elif [condition3 ]; then	
+	echo "Condition is true"	
+	
+else
+                    # Code to execute if condition is false
+    echo "Condition is false"
+	
+	
+	
+fi
+==========================
+1) vim if-cond.sh
+==========
+#!/bin/bash
+
+echo "enter number"
+read num1
+
+if [ "$num1" -gt 10 ]; then
+        echo "$num1 is greater than 10"
+		
+elif [ "$num1" -lt 10 ]; then
+        echo "$num1 is less than 10"
+
+else
+        echo "$num1 is 10"
+
+fi
+==============
+--> chmod 700 if-cond.sh
+--> bash -x if-cond.sh
+
+[examples:
+1. Check if two numbers are equal:
+----------
+a=5
+b=5
+
+if [ "$a" -eq "$b" ]; then
+  echo "Numbers are equal"
+fi
+-------------
+2. Check if a file exists:
+--------------
+if [ -f "file.txt" ]; then
+  echo "File exists"
+fi
+--------------
+3. Check if two strings are the same:
+--------------
+str1="hello"
+str2="hello"
+
+if [ "$str1" = "$str2" ]; then
+  echo "Strings match"
+fi
+-----------------
+4.✅ Example with else:
+---------------
+if [ -d "/etc" ]; then
+  echo "Directory exists"
+else
+  echo "Directory does not exist"
+fi
+----------------
+eg:1) vim 1-arithmetic.sh
+(#!/bin/bash
+###Basic Arithmetic Operators: 
+
+###Addition (+):
+
+echo "enter 1st numer"
+read a 
+
+echo "enter 2nd  numer"
+read b
+
+sum=$((a + b))
+echo $sum  # Output: 15
+
+)
+
+or
+
+num1=10
+num2=20
+sum=$(( num1 + num2 ))
+echo "sum is: $sum"
+
+-------------------------
+eg-2) 2-comparision.sh
+(#!/bin/bash
+a=10
+b=5
+if [ $a -gt $b ]; then
+  echo "a is greater than b"
+fi
+)
+=============================
+eg-3) SRTRING  COMPARISON OPERATORS
+
+------------
+str1="hello"
+str2="hello"
+if [ "$str1" = "$str2" ]; then
+  echo "str1 is equal to str2"
+  
+else 
+  echo "str1 is NOT equal to str2"
+    
+fi
+--------------
+str1="hello"
+str2="world"
+if [ "$str1" != "$str2" ]; then
+  echo "str1 is not equal to str2"
+fi
+
+------
+eg-4) FILE COMPARISON OPERATORS: 
+
+FILE EXISTS
+
+if [ -e "file.txt" ]; then
+  echo "file.txt exists"
+fi
+
+----------
+eg-5) BOOLEAN OPERATORS :
+
+#!/bin/bash
+
+a=10
+b=20
+c=30
+
+if [ $a -lt $b ] && [ $b -lt $c ] || [ $a -eq 10 ]; then
+  echo "a is less than b and b is less than c, or a is equal to 10"
+fi
+--------------------
+########################LOOPS########################
+LOOPS: loops as a way to automate repetitive tasks in scripts.
+repeat a set of commands multiple times, either:
+For a fixed number of times
+While a condition is true
+Until a condition becomes true
+
+1. for loop – Iterate over a list or a range
+Used when you know in advance how many times you want to repeat.
+
+2. while loop – Repeat while a condition is true
+Used when you don’t know in advance how many times it should run — it keeps running as long as the condition is true.
+Waiting for a condition to become false
+
+3. until loop – Repeat until a condition becomes true
+Similar to while, but it runs until the condition is true (opposite logic).
+Waiting for a condition to become true
+
+✅ Key Difference:
+Feature			while Loop				until Loop
+Condition Check		Runs while the condition is true	Runs until the condition becomes true
+Stops when		The condition becomes false		The condition becomes true
+Logic			Repeat as long as something is true	Repeat as long as something is false
+
+👀 Visual Tip:
+Imagine a while loop as:
+“As long as I have energy, I’ll keep working.”
+
+And an until loop as:
+“I’ll keep working until I get tired.”
+##########Loop Control Statements####################
+You can control how a loop behaves using:
+
+Command		What it does
+break		Exit the loop immediately
+continue	Skip the current iteration, go to next
+============================
+eg: for loop
+#!/bin/bash
+#for i in 1 2 3 4 5 6 7 8 9 10
+
+for i in {1..100}
+do
+   echo "THE NUMBER IS $i"
+done
+----------------
+eg: while loop
+
+#!/bin/bash
+i=1
+while [ "$i" -ge  100 ];
+
+do
+    echo " THE NUMBER IS $i"
+    i=$((i + 1))
+done
+
+echo "WHILE LOOP COMPLETED , now i value is $i"
+----------------------
+eg: until loop
+
+#!/bin/bash
+i=1
+until [ "$i" -gt 100  ];
+do
+   echo "the number is : $i"
+   i=$((i + 1))
+done
+--------------------
+01 July 2025-(class-5)
+-------------------------
+Break ad continue statements: break and continue statements are used to control the flow of loops (for, while, until).
+
+🔁 break Statement
+Purpose: Exits the loop entirely.
+Use Case: When a certain condition is met and you want to stop looping altogether.
+
+🔹 Syntax:
+break
+
+🔹 Example:
+
+#!/bin/bash
+
+for i in {1..5}
+do
+  if [ "$i" -eq 3 ]; then
+    echo "Breaking at i=$i"
+    break
+  fi
+  echo "i=$i"
+done
+
+-------------
+🔁 continue Statement
+Purpose: Skips the rest of the current loop iteration and proceeds to the next iteration.
+Use Case: When you want to skip certain values or conditions but keep looping.
+
+🔹 Syntax:
+continue
+
+🔹 Example:
+
+#!/bin/bash
+
+for i in {1..5}
+do
+  if [ "$i" -eq 3 ]; then
+    echo "Skipping i=$i"
+    continue
+  fi
+  echo "i=$i"
+done
+--------------------------------
+FUNCTIONS: A function in shell scripting is a reusable block of code that performs a specific task and can be called multiple times from within the script.
+Can output data using echo, or use return for status codes (0 = success, non-zero = error).
+Declared using function_name() or function function_name.
+
+✅ Why Use Functions?
+Avoid repeating code – write once, use many times.
+Organize your script into logical parts.
+Make your code cleaner and easier to understand.
+
+
+✅ What is return Used for in Shell Script Functions?
+In shell scripting, the return statement is used to send an exit status (a number between 0 and 255) from a function.
+
+🔹 Purpose of return:
+It exits the function.
+It sets an exit status that you can check using $?.
+Commonly used to signal success or failure(0-255):
+return 0 → success
+return 1 or higher → error or specific condition
+
+Syntax:
+-------
+function_name () {
+    command1
+    command2
+    ...
+  }
+
+  function function_name {
+    command1
+    command2
+    ...
+  }
+---------------
+eg: 
+#!/bin/bash
+
+multiply() {
+     result=$(($1 * $2))
+     return $result
+}
+
+multiply 5 6
+echo "returned output is $?"
+-----------------
+real time scenarios:
+
+Note: top -bn1 gives you one-time output of the top command, which can be used in scripts, logs, or monitoring tools.
+top -bn1:
+top: Displays dynamic real-time info about CPU, memory, processes, etc.
+-b: Batch mode – outputs to the terminal (or to a file) without user interaction; useful for scripting.
+-n1: Tells top to run only 1 iteration and then exit.
+
+-------
+CronJob setup:
+
+--> a cron job in Linux lets you schedule tasks (like scripts or commands) to run automatically at specified times.
+
+✅ Steps to Set Up a Cron Job
+🔹 1. Open the Crontab File
+Run this command to open the cron table (crontab) for the current user:
+crontab -e
+This opens your crontab file in the default editor (e.g., nano or vim).
+
+🔹 2. Add Your Cron Job Entry
+A cron job has this format:
+
+* * * * * command_to_run
+│ │ │ │ │
+│ │ │ │ └── Day of the week (0-7) (Sunday=0 or 7)
+│ │ │ └──── Month (1-12)
+│ │ └────── Day of the month (1-31)
+│ └──────── Hour (0-23)
+└────────── Minute (0-59)
+🧾 Example Cron Jobs
+Task						Cron Syntax
+Run every minute			* * * * * /path/to/script.sh
+Run every day at 5 AM			0 5 * * * /path/to/script.sh
+Run every Monday at 8 PM		0 20 * * 1 /path/to/script.sh
+Run every 15 minutes			*/15 * * * * /path/to/script.sh
+Run on the 1st of every month at 2 AM ---> 0 2 1 * * /path/to/script.sh
+
+🔹 3. Save and Exit
+Once you've added your line:
+
+In nano, press Ctrl + O, Enter, then Ctrl + X
+
+In vim, press Esc, then type :wq, and hit Enter
+
+🔹 4. Verify Your Cron Jobs
+To view your current crontab entries:
+
+crontab -l
+🔹 5. (Optional) Redirect Output to a Log File
+By default, cron doesn't show output. You can log it like this:
+
+0 5 * * * /path/to/script.sh >> /var/log/myscript.log 2>&1
+✅ Tips
+Make sure your script has execute permission:
+
+chmod +x /path/to/script.sh
+
+Use absolute paths in your script (cron has limited environment variables).
+For system-wide jobs, edit /etc/crontab or use /etc/cron.d/.
+
+=======================
+✅ What is crontab?
+crontab (short for cron table) is a configuration file in Unix/Linux systems that is used to schedule and automate tasks to run at specific times or intervals.
+
+These tasks, known as cron jobs, can be anything from running a script, backing up data, sending emails, or monitoring system status.
+
+Jobs can be run every minute, hour, day, week, or month.
+
+
+🧾 Crontab Format
+
+* * * * * command_to_run
+│ │ │ │ │
+│ │ │ │ └── Day of the week (0–7) [Sun=0 or 7]
+│ │ │ └──── Month (1–12)
+│ │ └────── Day of the month (1–31)
+│ └──────── Hour (0–23)
+└────────── Minute (0–59)
+✅ Simple Crontab Example
+Let's say you want to run a backup script every day at 2:30 AM:
+
+30 2 * * * /home/user/scripts/backup.sh
+
+Explanation:
+
+30 → minute
+
+2 → hour
+
+* → every day
+
+* → every month
+
+* → every day of the week
+
+The cron daemon will run /home/user/scripts/backup.sh at 2:30 AM daily.
+
+⏱️ Another Example: Run Script Every 5 Minutes
+
+*/5 * * * * /home/user/scripts/monitor.sh
+This runs the monitor.sh script every 5 minutes.
+
+📖 View or Edit Your Crontab
+To view your current crontab:
+
+crontab -l
+
+To edit your crontab:
+
+crontab -e
+-------------
+Let me know if you want examples for common use cases like:
+
+Sending email alerts
+
+Running database backups
+
+Cleaning up temp files
+
+Monitoring disk usage
+
+
+1) 📬 1. Send Email Alert Daily at 8 AM
+Assume you have a script /home/user/email_alert.sh that sends an email using mail or sendmail.
+
+0 8 * * * /home/user/email_alert.sh
+What it does:
+Runs the script at 8:00 AM every day.
+
+💾 2. Backup a Directory Every Night at 11 PM
+Create a backup of /home/user/docs/ to /backup/docs/.
+
+0 23 * * * tar -czf /backup/docs_$(date +\%F).tar.gz /home/user/docs/
+What it does:
+Creates a compressed .tar.gz file every night at 11:00 PM.
+
+🧹 3. Clean Temporary Files Every Hour
+Deletes files older than 7 days in /tmp.
+
+0 * * * * find /tmp -type f -mtime +7 -exec rm -f {} \;
+What it does:
+Cleans up old temporary files every hour.
+
+💽 4. Check Disk Usage Every Morning and Email If >80%
+Let’s say you have this script /home/user/check_disk.sh:
+
+bash
+Copy
+Edit
+#!/bin/bash
+usage=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
+if [ "$usage" -gt 80 ]; then
+    echo "Disk usage critical: $usage%" | mail -s "Disk Alert" user@example.com
+fi
+
+Then add to crontab:
+
+0 7 * * * /home/user/check_disk.sh
+What it does:
+Sends an alert email if disk usage exceeds 80% at 7:00 AM daily.
+-----------------------
+To capture output of a cron job:
+
+0 * * * * /path/to/script.sh >> /var/log/script.log 2>&1
+Breakdown:
+
+>>: appends output
+
+2>&1: combines error output with standard output
+
+======================END======================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
