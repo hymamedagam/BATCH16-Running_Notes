@@ -1279,18 +1279,82 @@ Breakdown:
 
 ======================END======================
 
+✅ 1. Logical Operators
+Logical operators in Bash are typically used within if statements and test conditions.
 
+a. AND (&&)
 
+#!/bin/bash
 
+a=10
+b=20
 
+if [ "$a" -lt 15 ] && [ "$b" -gt 15 ]; then
+    echo "Both conditions are true"
+fi
 
+b. OR (||)
 
+#!/bin/bash
 
+a=5
+b=100
 
+if [ "$a" -lt 10 ] || [ "$b" -lt 50 ]; then
+    echo "At least one condition is true"
+fi
 
+c. NOT (!)
 
+#!/bin/bash
 
+a=10
 
+if ! [ "$a" -eq 5 ]; then
+    echo "a is NOT equal to 5"
+fi
+===========================
+✅ 2. Bitwise Operators
+Bash does not support bitwise operators directly in if statements like C/C++. You must use $(( )) for arithmetic evaluation.
 
+a. Bitwise AND (&)
 
+#!/bin/bash
 
+a=5    # Binary: 0101
+b=3    # Binary: 0011
+
+result=$(( a & b ))
+echo "Bitwise AND of $a & $b = $result"
+
+b. Bitwise OR (|)
+
+#!/bin/bash
+
+a=5
+b=3
+
+result=$(( a | b ))
+echo "Bitwise OR of $a | $b = $result"
+
+c. Bitwise XOR (^)
+
+#!/bin/bash
+
+a=5
+b=3
+
+result=$(( a ^ b ))
+echo "Bitwise XOR of $a ^ $b = $result"
+
+d. Bitwise NOT (~)
+
+#!/bin/bash
+
+a=5
+
+result=$(( ~a ))
+echo "Bitwise NOT of $a = $result"
+⚠️ ~a returns the two's complement, so for a=5, result is -6.
+
+===========================
