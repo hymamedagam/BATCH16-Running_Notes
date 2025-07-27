@@ -1358,3 +1358,100 @@ echo "Bitwise NOT of $a = $result"
 ⚠️ ~a returns the two's complement, so for a=5, result is -6.
 
 ===========================
+
+Strings examples:
+==============
+1) replace substring:
+
+ str="I like Python"
+str="${str/Python/Bash}"
+echo "$str"
+
+note: For global replacement: ${str//old/new}
+
+2) Convert to Upper or Lower Case (Bash 4+)
+
+str="Linux"
+echo "${str^^}"  # Output: LINUX (upper case)
+echo "${str,,}"  # Output: linux (lower case)
+
+3) Find Substring
+
+str="Bash scripting is fun"
+
+if [[ "$str" == *"scripting"* ]]; then
+    echo "Substring found!"
+fi
+
+4) Check if String is Empty or Not
+
+str=""
+
+if [ -z "$str" ]; then
+    echo "String is empty"
+fi
+
+if [ -n "$str" ]; then
+    echo "String is not empty"
+fi
+
+5)  String Length
+
+str="OpenAI"
+echo "Length: ${#str}"  # Output: 6
+
+6) Substring Extraction
+
+str="ShellScripting"
+echo "${str:0:5}"   # Output: Shell (from index 0, length 5)
+echo "${str:5}"     # Output: Scripting (from index 5 to end)
+
+7)String Concatenation
+
+str3="$str1 $str2"
+echo "$str3"   # Output: Hello World
+
+8)  String Comparison
+
+a="hello"
+b="world"
+
+if [ "$a" = "$b" ]; then
+    echo "Strings are equal"
+else
+    echo "Strings are NOT equal"
+fi
+🔁 Operators: =, !=, <, >
+
+For < and > use double brackets:
+
+if [[ "$a" < "$b" ]]; then
+    echo "$a comes before $b"
+fi
+
+
+
+shortcut:
+
+concatenantion: "$str1 $str2"
+length: ${#str}
+upper case: "${str^^}"
+lower case: "${str,,}"
+replace substring: "${str/old/new}"
+================================
+
+ Full Example Script
+
+#!/bin/bash
+
+string="shellscripting"
+
+echo "Full string: $string"
+echo "First 5 chars: ${string:0:5}"
+echo "From index 6 to end: ${string:6}"
+echo "6 chars from index 6: ${string:6:6}"
+echo "Last 6 chars: ${string: -6}"
+echo "3 chars from 7th-last: ${string: -7:3}"
+
+
+
