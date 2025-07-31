@@ -1453,5 +1453,148 @@ echo "6 chars from index 6: ${string:6:6}"
 echo "Last 6 chars: ${string: -6}"
 echo "3 chars from 7th-last: ${string: -7:3}"
 
+1) Automate server health checks (Health Check Script: health_check.sh)
+====================
+#!/bin/bash
+###CPU, Memory, Disk health checks
+
+cpu_load=$(top -bn1 | grep "%Cpu(s)" | awk -F" " '{print $2 + $4}')
+memory_usage=$(free | grep Mem | awk '{print $3/$2 * 100.0}')
+disk_usage=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//' )
+
+#Thresholds
+cpu_threshold=80
+memory_threshold=80
+disk_threshold=80
+
+if (( ${cpu_load%.*} > cpu_threshold )); then
+  echo "cpu_load is high: ${cpu_load}%" | mail -s "CPU Alert" mindcircuit@gmail.com
+
+if ((${memory_usage%.*} > memory_threshold )); then
+  echo "memory Usage is high: ${memory_usage}%" | mail -s "Memory Alert" mindcircuit@gmail.com
+
+if ((disk_usage > disk_threshold )); then
+  echo "disk Usage is high: ${disk_usage}%" | mail -s "Disk Alert" mindcircuit@gmail.com
+
+fi
+
+NOTE: NR==2  --> second line
+
+=============================
+
+2. Log management script (log_rotate.sh)
+=================
+#!/bin/bash
+
+#Compress logs older than 7 days
+
+find /var/log/app -name "*.log" -mtime +7 -exec gzip {} \;
+
+## Move compressed logs to backup folder
+
+mkdir -p /var/log/backup
+find /var/log/app -name "*.gz" -exec mv {} /var/log/backup/ \;
+
+#Delete backups older than 30 days
+find /var/log/backup/ -name "*.gz" -mtime +30 -exec rm {} \;
+
+==========================
+3) Schedule automated backups
+
+#!/bin/bash
+
+backup_dir="/backup"
+date=$(date +%F)
+mkdir -p $backup_dir
+
+#Backup /etc and /var/www
+
+tar -czf $backup_dir/etc_backup_$date.tar.gz /etc
+tar -czf $backup_dir/www_backup_$date.tar.gz /var/www
+
+#Simulate copying to remote (can use rsync for real cases)
+cp $backup_dir/* /remote_backup/
+
+
+
+Note: In real setups, you'd typically replace this with:
+
+rsync -avh $backup_dir/ user@remotehost:/backup_location/
+===============================
+
+4)Automate application deployment: (deploy_app.sh)
+===================
+
+# Pull latest code
+
+git -C /var/www/html pull origin main
+
+# Set Permissions
+chmod -R 755 /var/www/html
+
+# Restart service
+systemctl restart nginx
+
+#validate service status
+if systemctl status nginx | grep -q running; then
+   echo "Deployment successful and nginx is running."
+else
+   echo "Deployment failed or nginx is not running!" | mail -s "Deployment issue" mindcircuit@gmail.com
+
+
+fi
+
+
+Note: git -c used to run git command in the specified directory (/var/www/html) without needing to cd into it.
+
+git -q --> grep -q running quietly checks if the word "running" appears.
+==========================
+
+
+
+6) Real-time log monitoring and alerts
+===================
+#!/bin/bash
+
+log_file="/var/log/app/app.log"
+tail -F "$log_file" | while read -r line; do
+   if echo "$line" | grep -q "ERROR"; then
+     echo "Error detected: $line" | mail -s "Application     	Error Alert" mindcircuit@gmail.com
+   fi
+done
+
+Note: mail -s ==> fixed subject spacing
+read -r line ==> prevents backslash interpretation
+
+===================
+7) Cleanup of temporary files and docker images (cleanup.sh)
+
+#!/bin/bash
+
+# Remove temp files older than 7 days
+find /tmp -type -f -mtime +7 -exec rm {} \;
+
+# Prune unused Docker images
+docker image prune -f
+=====================
+
+
+8) Automate all process using cron jobs
+=========
+#Health check , log rotation, backup daily at midnight
+
+0 0 * * * /scripts/backup_script.sh
+0 0 * * * /scripts/health_check.sh
+0 0 * * * /scripts/log_rotate.sh
+# cleanup every sunday at 1AM
+0 1 * * 0 /scripts/cleanup.sh
+=============
+Note: * * * * * command
+| | | | |
+| | | | +---- Day of week (0-7)
+| | | +------ Month (1-12)
+| | +-------- Day of month (1-31)
+| +---------- Hour (0-23)
++------------ Minute (0-59)
 
 
